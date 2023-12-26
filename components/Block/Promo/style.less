@@ -1,0 +1,45 @@
+.promo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 48px;
+  background: var(--primary-color);
+  color: var(--primary-color-text);
+  border-radius: 16px;
+
+  @media (max-width: 740px) {
+    flex-wrap: wrap;
+    padding: 24px;
+  }
+
+  .text-wrap {
+    flex: 1;
+
+    @media (max-width: 740px) {
+      flex: auto;
+    }
+
+    h3 {
+      color: inherit;
+    }
+  }
+
+  .button-group {
+
+    @media (min-width: 741px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 740px) {
+      width: 100%;
+    }
+
+    .button {
+
+      @media (min-width: 741px) {
+        width: 100%;
+      }
+    }
+  }
+}

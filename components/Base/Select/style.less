@@ -1,0 +1,41 @@
+.select-wrap {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 16px;
+    top: 22px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: var(--text-color) transparent transparent transparent;
+    pointer-events: none;
+  }
+
+  &.no-border {
+
+    &:after {
+      right: 0;
+      top: 10px;
+    }
+
+    .input {
+      border: 0;
+      padding: 0 26px 0 0;
+      min-height: auto;
+      background: transparent;
+
+      &:focus {
+        color: var(--highlight-color);
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .input {
+    padding-right: 42px;
+  }
+}
