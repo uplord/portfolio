@@ -244,9 +244,17 @@
         link: [{
           rel: 'preload',
           as: 'image',
-          href: '/assets/images/main@2x.webp',
+          imagesrcset: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
           media: '(max-width: 640px)'
+        },{
+          rel: 'preload',
+          as: 'image',
+          imagesrcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
+          media: '(min-width: 641px)'
         }],
+        htmlAttrs: {
+          lang: 'en'
+        },
         bodyAttrs: {
           class: 'homepage'
         }
