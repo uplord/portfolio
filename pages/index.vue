@@ -11,6 +11,8 @@
             srcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
             srcset_mobile: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
             floating_image: '/assets/images/main.webp',
+            image_width: 500,
+            image_height: 500,
             title: 'Hi I\'m Michael a Senior Front End Developer based in Dundee, Scotland',
             subtitle: 'With 8 years in the industry creating websites',
             buttons: [{
@@ -28,6 +30,8 @@
             srcset: '/assets/images/about.webp, /assets/images/about@2x.webp 2x',
             srcset_mobile: '/assets/images/about_m.webp, /assets/images/about_m@2x.webp 2x',
             image: '/assets/images/about.png',
+            image_width: 660,
+            image_height: 814,
             subtitle: 'About Michael Allen',
             title: 'Front End Development',
             content: '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
@@ -109,6 +113,8 @@
             tooltip: 'Campbells Meat'
           },{
             image: '/assets/images/petervardy.png',
+            image_width: 326,
+            image_height: 217,
             title: 'Peter Vardy',
             class: 'mini middle text-center',
             text_hover: false,
@@ -116,6 +122,8 @@
             tooltip: 'Peter Vardy'
           },{
             image: '/assets/images/carmoney.png',
+            image_width: 326,
+            image_height: 217,
             title: 'Carmoney',
             class: 'mini middle text-center',
             text_hover: false,

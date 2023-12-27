@@ -22,7 +22,7 @@
         ]"
       >
         <div class="image-wrap" v-if="card.image">
-          <img :src="card.image" :alt="card.title" loading="lazy" />
+          <img :src="card.image" :alt="card.title" loading="lazy" :width="card.image_width" :height="card.image_height" />
         </div>
 
         <div class="image-wrap svg-wrap" v-if="card.svg">

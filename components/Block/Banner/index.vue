@@ -25,7 +25,7 @@
             <picture>
               <source media="(max-width: 640px)" :srcset="slide.srcset_mobile" v-if="slide.srcset_mobile" />
               <source media="(min-width: 641px)" :srcset="slide.srcset" v-if="slide.srcset" />
-              <img :src="slide.floating_image" :alt="slide.title" :loading="key != 0 ? 'lazy' : ''" />
+              <img :src="slide.floating_image" :alt="slide.title" :loading="key != 0 ? 'lazy' : ''" :width="slide.image_width" :height="slide.image_height" />
             </picture>
           </div>
 
