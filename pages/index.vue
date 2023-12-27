@@ -236,19 +236,24 @@
   export default {
     setup () {
       useHead({
-        title: 'Michael Allen',
+        title: 'Michael Allen - Front End Developer',
         meta: [
-          { name: 'description', content: 'My amazing site.' }
+          { name: 'Michael Allen', content: 'Front End Developer' }
         ],
-        //<link rel="preload" href="small_cat.jpg" as="image" media="(max-width: 400px)">
         link: [{
           rel: 'preload',
+          fetchpriority: "high",
           as: 'image',
+          type: 'image/webp',
+          href: '/assets/images/main_m.webp',
           imagesrcset: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
           media: '(max-width: 640px)'
         },{
           rel: 'preload',
+          fetchpriority: "high",
           as: 'image',
+          type: 'image/webp',
+          href: '/assets/images/main.webp',
           imagesrcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
           media: '(min-width: 641px)'
         }],
