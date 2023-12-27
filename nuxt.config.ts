@@ -7,7 +7,7 @@ const contentSecurityPolicy = {
     "'unsafe-inline'",
     "'strict-dynamic'",
     "'nonce-{{nonce}}'",
-    'silly-genie-cd642a.netlify.app'
+    'https://silly-genie-cd642a.netlify.app'
   ]
 }
 
