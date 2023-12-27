@@ -2,13 +2,15 @@
 export default defineNuxtConfig({
   css: ['~/assets/less/style.less'],
   devtools: { enabled: true },
-  //experimental: { inlineSSRStyles: false },
   app: {
     buildAssetsDir: "/nuxt/",
-    //baseURL: '/projects/main',
   },
   modules: ['nuxt-icons', 'nuxt-security', "@nuxt/image"],
   security: {
-    // options
-  }
+    headers: {
+      contentSecurityPolicy: {
+        'script-src': ["'self'", 'data:', 'https://silly-genie-cd642a.netlify.app'],
+      },
+    },
+  },
 })
