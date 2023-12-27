@@ -21,7 +21,7 @@
           <h4 class="primary">{{ section.subtitle }}</h4>
           <h3 class="h2">{{ section.title }}</h3>
           <div class="inner-container" v-if="section.content" v-html="section.content"></div>
-          <Buttons
+          <BaseButtons
             :buttons="section.buttons"
           />
         </div>

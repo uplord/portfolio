@@ -11,7 +11,7 @@
         <div class="inner-container" v-if="all_promo.content" v-html="all_promo.content"></div>
       </div>
 
-      <Buttons
+      <BaseButtons
         :buttons="all_promo.buttons"
       />
     </div>

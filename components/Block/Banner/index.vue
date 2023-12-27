@@ -32,7 +32,7 @@
           <div class="text-wrap">
             <h1>{{ slide.title }}</h1>
             <h3>{{ slide.subtitle }}</h3>
-            <Buttons
+            <BaseButtons
               :buttons="slide.buttons"
             />
           </div>

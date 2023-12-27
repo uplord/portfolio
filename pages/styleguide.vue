@@ -61,7 +61,7 @@
 
         <div class="inner-container">
           <h2 class="h4">Buttons</h2>
-          <Buttons :buttons="[
+          <BaseButtons :buttons="[
             {
               text: 'Link',
               link: '/styleguide'
