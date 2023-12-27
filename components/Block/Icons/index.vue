@@ -22,8 +22,8 @@
         </div>
 
         <div class="text-wrap inner-container" v-if="icon.title || icon.content">
-          <h4 class="primary" v-if="icon.subtitle">{{ icon.subtitle }}</h4>
-          <h3 v-if="icon.title">{{ icon.title }}</h3>
+          <h3 class="h4 primary" v-if="icon.subtitle">{{ icon.subtitle }}</h3>
+          <h4 class="h3" v-if="icon.title">{{ icon.title }}</h4>
 
           <a :href="icon.logo.url" target="_blank" class="logo-wrap" v-if="icon.logo" :aria-label="icon.logo.title">
             <nuxt-icon :name="icon.logo.src" filled />

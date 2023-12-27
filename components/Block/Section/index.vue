@@ -18,7 +18,7 @@
         </div>
 
         <div class="text-wrap inner-container">
-          <h4 class="primary">{{ section.subtitle }}</h4>
+          <h2 class="h4 primary">{{ section.subtitle }}</h2>
           <h3 class="h2">{{ section.title }}</h3>
           <div class="inner-container" v-if="section.content" v-html="section.content"></div>
           <BaseButtons
