@@ -17,11 +17,16 @@ export default defineNuxtConfig({
   app: {
     buildAssetsDir: "/nuxt/",
   },
-  modules: ['nuxt-icons', 'nuxt-security', "@nuxt/image"],
+  modules: ['nuxt-icons', 'nuxt-security', '@nuxt/image', '@nuxtjs/google-fonts'],
   security: {
     headers: {
       crossOriginEmbedderPolicy: process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp',
       contentSecurityPolicy: contentSecurityPolicy,
     },
+  },
+  googleFonts: {
+    families: {
+      'DA Sans': true,
+    }
   }
 })
