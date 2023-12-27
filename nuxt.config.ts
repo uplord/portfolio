@@ -5,5 +5,5 @@ export default defineNuxtConfig({
   app: {
     buildAssetsDir: "/nuxt/",
   },
-  modules: ['nuxt-icons', 'nuxt-security', "@nuxt/image"],
+  modules: ['nuxt-icons', "@nuxt/image"],
 })
