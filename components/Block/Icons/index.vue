@@ -14,7 +14,7 @@
         }
       ]">
         <div class="image-wrap" v-if="icon.image">
-          <img :src="icon.image" alt="" loading="lazy" />
+          <NuxtImg :src="icon.image" format="webp" :alt="icon.title" loading="lazy" />
         </div>
 
         <div class="svg-wrap" v-if="icon.svg ">

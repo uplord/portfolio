@@ -7,10 +7,7 @@ export default defineNuxtConfig({
     buildAssetsDir: "/nuxt/",
     //baseURL: '/projects/main',
   },
-  modules: [
-    'nuxt-icons',
-    'nuxt-security',
-  ],
+  modules: ['nuxt-icons', 'nuxt-security', "@nuxt/image"],
   security: {
     // options
   }
