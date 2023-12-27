@@ -66,8 +66,12 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 16px;
+
+  @media (min-width: 641px) {
+    justify-content: flex-start;
+  }
 
   &.stacked {
     flex-direction: column;

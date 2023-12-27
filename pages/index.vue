@@ -246,7 +246,7 @@
       useHead({
         title: 'Michael Allen - Front End Developer',
         meta: [
-          { name: 'Michael Allen', content: 'Front End Developer' }
+          { name: 'description', content: 'Experienced Front End Developer with 8 years of expertise, showcasing excellent collaboration, organization, and teamwork skills. Passionate about HTML, CSS, and JavaScript, I thrive on creating exceptional websites. My strong analytical, debugging, and problem-solving abilities have successfully served both small and large clients. Always open to exploring new technologies for innovative web solutions.' }
         ],
         link: [{
           rel: 'preload',
