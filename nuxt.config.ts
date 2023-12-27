@@ -31,7 +31,6 @@ export default defineNuxtConfig({
         'object-src': ["'none'"],
         'script-src-attr': ["'none'"],
         'form-action': ["'self'"],
-        'frame-ancestors': ["'self'", "https://silly-genie-cd642a.netlify.app"],
         'upgrade-insecure-requests': true
       }
     },
