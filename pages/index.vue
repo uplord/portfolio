@@ -189,11 +189,7 @@
             },{
               subtitle: '2013 - 2015',
               title: 'BSc (Hons), Web Design and Development',
-              logo: {
-                src: 'abertay-logo',
-                url: 'https://www.abertay.ac.uk/',
-                title: 'Abertay University',
-              },
+              content: '<p>Abertay University</p>'
             }]
           }]"
         />
