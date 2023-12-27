@@ -17,11 +17,6 @@
               title: 'Banner Michael Allen Image',
               floating: true,
             },
-            srcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
-            srcset_mobile: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
-            floating_image: '/assets/images/main.webp',
-            image_width: 500,
-            image_height: 500,
             title: 'Hi I\'m Michael a Senior Front End Developer based in Dundee, Scotland',
             subtitle: 'With 8 years in the industry creating websites',
             buttons: [{

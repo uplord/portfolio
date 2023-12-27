@@ -23,7 +23,7 @@
         <div class="text-content" :class="{ 'has-floating': slide.image.floating == true }">
           <div class="floating-image" v-if="slide.image.floating == true">
             <picture>
-              <source media="(max-width: 640px)" :srcset="slide.image.srcset_mobile" v-if="slide.image/srcset_mobile" />
+              <source media="(max-width: 640px)" :srcset="slide.image.srcset_mobile" v-if="slide.image.srcset_mobile" />
               <source media="(min-width: 641px)" :srcset="slide.image.srcset" v-if="slide.image.srcset" />
               <img :src="slide.image.src" :alt="slide.image.title" :loading="key != 0 ? 'lazy' : ''" :width="slide.image.width" :height="slide.image.height" />
             </picture>

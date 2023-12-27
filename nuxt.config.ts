@@ -9,5 +9,9 @@ export default defineNuxtConfig({
   },
   modules: [
     'nuxt-icons',
+    'nuxt-security',
   ],
+  security: {
+    // options
+  }
 })
