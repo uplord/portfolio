@@ -5,5 +5,10 @@ export default defineNuxtConfig({
   app: {
     buildAssetsDir: "/nuxt/",
   },
-  modules: ['nuxt-icons', "@nuxt/image"],
+  modules: ['nuxt-icons', 'nuxt-security', "@nuxt/image"],
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp',
+    },
+  }
 })
