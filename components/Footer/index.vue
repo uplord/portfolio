@@ -8,17 +8,17 @@
 
     <ul class="social-icons">
       <li>
-        <NuxtLink to="https://www.instagram.com/michael.adam.allen/" target="_blank">
+        <NuxtLink to="https://www.instagram.com/michael.adam.allen/" target="_blank" aria-label="Instagram">
           <nuxt-icon name="instagram" filled />
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink to="https://www.linkedin.com/in/themichael/" target="_blank">
+        <NuxtLink to="https://www.linkedin.com/in/themichael/" target="_blank" aria-label="Linkedin">
           <nuxt-icon name="linkedin-in" filled />
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink to="mailto:michael@uplord.co.uk">
+        <NuxtLink to="mailto:michael@uplord.co.uk" aria-label="Email">
           <nuxt-icon name="envelope-solid" filled />
         </NuxtLink>
       </li>

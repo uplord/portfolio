@@ -11,21 +11,21 @@
           'top': slide.top == true,
         }
       ]">
-        <div class="image-wrap" v-if="slide.image">
+        <div class="image-wrap" v-if="slide.image && slide.image.floating != true">
           <picture>
-            <source :srcset="slide.image_mobile" media="(max-width: 640px)">
-            <img :src="slide.image" :alt="slide.title" />
+            <source :srcset="slide.image.src_mobile" media="(max-width: 640px)">
+            <img :src="slide.image.src" :alt="slide.image.title" />
           </picture>
         </div>
 
         <div class="placeholder" v-else></div>
 
-        <div class="text-content" :class="{ 'has-floating': slide.floating_image }">
-          <div class="floating-image" v-if="slide.floating_image">
+        <div class="text-content" :class="{ 'has-floating': slide.image.floating == true }">
+          <div class="floating-image" v-if="slide.image.floating == true">
             <picture>
-              <source media="(max-width: 640px)" :srcset="slide.srcset_mobile" v-if="slide.srcset_mobile" />
-              <source media="(min-width: 641px)" :srcset="slide.srcset" v-if="slide.srcset" />
-              <img :src="slide.floating_image" :alt="slide.title" :loading="key != 0 ? 'lazy' : ''" :width="slide.image_width" :height="slide.image_height" />
+              <source media="(max-width: 640px)" :srcset="slide.image.srcset_mobile" v-if="slide.image/srcset_mobile" />
+              <source media="(min-width: 641px)" :srcset="slide.image.srcset" v-if="slide.image.srcset" />
+              <img :src="slide.image.src" :alt="slide.image.title" :loading="key != 0 ? 'lazy' : ''" :width="slide.image.width" :height="slide.image.height" />
             </picture>
           </div>
 

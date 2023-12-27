@@ -25,7 +25,7 @@
           <h4 class="primary" v-if="icon.subtitle">{{ icon.subtitle }}</h4>
           <h3 v-if="icon.title">{{ icon.title }}</h3>
 
-          <a :href="icon.logo.url" target="_blank" class="logo-wrap" v-if="icon.logo">
+          <a :href="icon.logo.url" target="_blank" class="logo-wrap" v-if="icon.logo" :aria-label="icon.logo.title">
             <nuxt-icon :name="icon.logo.src" filled />
           </a>
 

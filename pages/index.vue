@@ -8,6 +8,15 @@
           animate="true"
           :visible="sections[0].visible"
           :slides="[{
+            image: {
+              src: '/assets/images/main.webp',
+              srcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
+              srcset_mobile: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
+              width: 500,
+              height: 500,
+              title: 'Banner Michael Allen Image',
+              floating: true,
+            },
             srcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
             srcset_mobile: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
             floating_image: '/assets/images/main.webp',
@@ -27,11 +36,14 @@
           id="about-me"
           :visible="sections[1].visible"
           :sections="[{
-            srcset: '/assets/images/about.webp, /assets/images/about@2x.webp 2x',
-            srcset_mobile: '/assets/images/about_m.webp, /assets/images/about_m@2x.webp 2x',
-            image: '/assets/images/about.png',
-            image_width: 660,
-            image_height: 814,
+            image: {
+              src: '/assets/images/about.png',
+              srcset: '/assets/images/about.webp, /assets/images/about@2x.webp 2x',
+              srcset_mobile: '/assets/images/about_m.webp, /assets/images/about_m@2x.webp 2x',
+              width: 660,
+              height: 814,
+              title: 'About Michael Allen Image'
+            },
             subtitle: 'About Michael Allen',
             title: 'Front End Development',
             content: '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
@@ -150,7 +162,8 @@
               title: 'Senior Front End Developer',
               logo: {
                 src: 'snappy-logo',
-                url: 'https://www.snappyshopper.co.uk/'
+                url: 'https://www.snappyshopper.co.uk/',
+                title: 'Snappy Shopper',
               },
               content: '<p>Returning to Hungrrr full time just in time for the merger with Snappy Shopper and continuing to lead the front end of the Hungrrr platform while also assisting the Snappy Shopper team. Updating and improving the ordering platform to keep up with style trends and work better for clients and members in the team.</p>' +
                 '<p>Maintaining hundreds of clients websites and making periodic changes to improve their performance and help pull through more sales. Increasing the amount of client enquires to join the platforms through updates to the B2B websites making it easier to sign up and to keep a track of these leads.</p>',
@@ -160,7 +173,8 @@
               title: 'Front End Developer',
               logo: {
                 src: 'hungrrr-logo',
-                url: 'https://www.hungrrr.co.uk/'
+                url: 'https://www.hungrrr.co.uk/',
+                title: 'Hungrrr',
               },
               content: '<p>Leading front end in the company at the beginning of the pandemic. Integrating a table ordering system for businesses reopening to make the users journey easier and opening up this feature to all the client on this platform.</p><p>Developing an internal business setup tool to make it easier for our team to add businesses to our system and also maintain clients. Continuing to do work for them while back at mtc due to the impact I made in the company even in just a short period of time. </p>',
             },{
@@ -168,7 +182,8 @@
               title: 'Front End Devloper',
               logo: {
                 src: 'mtc-logo',
-                url: 'https://www.mtc.co.uk/'
+                url: 'https://www.mtc.co.uk/',
+                title: 'mtc.',
               },
               content: '<p>While in mtc I have worked in many areas of the company from leading projects to dealing with aftercare for clients. I was able to work on complex projects early into joining the company without needing much assistance to mentoring newer members of staff.</p><p>I have dealt with hundreds of different websites and have the ability to work to tight deadlines without lowering quality. I have been able to work across multiple teams in the company and am quick to adapt to new situations.</p>',
             },{
@@ -176,7 +191,8 @@
               title: 'BSc (Hons), Web Design and Development',
               logo: {
                 src: 'abertay-logo',
-                url: 'https://www.abertay.ac.uk/'
+                url: 'https://www.abertay.ac.uk/',
+                title: 'Abertay University',
               },
             }]
           }]"

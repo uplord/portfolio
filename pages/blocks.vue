@@ -13,9 +13,12 @@
         <h2 class="alignwide">Banner</h2>
 
         <BlockBanner animate="true" :visible="sections[0].visible" :slides="[{
-          srcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
-          srcset_mobile: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
-          floating_image: '/assets/images/main.webp',
+          image: {
+            srcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
+            srcset_mobile: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
+            src: '/assets/images/main.webp',
+            floating: true,
+          },
           title: 'A Senior Front End Developer based in Dundee, Scotland',
           subtitle: 'With 8 years in the industry creating websites',
           buttons: [{
@@ -25,8 +28,10 @@
           }],
           class: ''
         },{
-          image: '/assets/images/122-2000x800.jpg',
-          image_mobile: 'https://placehold.co/640x1000/333/333',
+          image: {
+            src: '/assets/images/122-2000x800.jpg',
+            src_mobile: 'https://placehold.co/640x1000/333/333',
+          },
           title: 'A Senior Front End Developer based in Dundee, Scotland',
           subtitle: 'With 7 years in the industry creating websites',
           buttons: [{
@@ -36,8 +41,10 @@
           }],
           class: 'text-center light'
         },{
-          image: '/assets/images/185-2000x800.jpg',
-          image_mobile: 'https://placehold.co/640x1000/EEE/EEE',
+          image: {
+            src: '/assets/images/185-2000x800.jpg',
+            src_mobile: 'https://placehold.co/640x1000/EEE/EEE',
+          },
           title: 'A Senior Front End Developer based in Dundee, Scotland',
           subtitle: 'With 7 years in the industry creating websites',
           buttons: [{
