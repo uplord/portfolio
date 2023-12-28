@@ -13,7 +13,7 @@
           <picture>
             <source media="(max-width: 640px)" :srcset="section.image.srcset_mobile" v-if="section.image.srcset_mobile" />
             <source media="(min-width: 641px)" :srcset="section.image.srcset" v-if="section.image.srcset" />
-            <img :src="section.image" :alt="section.image.title" loading="lazy" :width="section.image.width" :height="section.image.height" />
+            <img :src="section.image.src" :alt="section.image.title" loading="lazy" :width="section.image.width" :height="section.image.height" />
           </picture>
         </div>
 
