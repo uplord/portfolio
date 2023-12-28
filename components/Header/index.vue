@@ -2,8 +2,8 @@
   <header class="header alignmax">
     <div class="container alignwide">
 
-      <a href="/" class="logo" aria-label="Home">
-        <span class="m">M</span>The<span class="red">Michael</span>
+      <a href="/" class="logo">
+        <span class="m">M</span>The <span class="red">Michael</span>
       </a>
 
       <div class="navigation">
