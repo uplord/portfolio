@@ -2,9 +2,9 @@
   <header class="header alignmax">
     <div class="container alignwide">
 
-      <a href="/" class="logo">
+      <NuxtLink to="/" class="logo">
         <span class="m">M</span>The<span class="red">Michael</span>
-      </a>
+      </NuxtLink>
 
       <div class="navigation">
         <ul>
