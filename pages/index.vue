@@ -276,7 +276,7 @@
           lang: 'en'
         },
         bodyAttrs: {
-          class: 'homepage'
+          class: 'homepage sticky'
         }
       })
     },
