@@ -26,3 +26,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
     }
   }
 })
+
+window.addEventListener('scroll', function() {
+  document.documentElement.classList.toggle('scrolled', window.scrollY > 0)
+})

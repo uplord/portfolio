@@ -1,5 +1,11 @@
-.light .light-header .toggle span {
-  //border-color: #000;
+:root {
+  --toggle-color: #bdc1c6;
+  --toggle-hover: #979a9e;
+}
+
+:root.dark {
+  --toggle-color: #97948f;
+  --toggle-hover: #FFFFFF;
 }
 
 .dark .dark-header .toggle span {
@@ -9,12 +15,9 @@
 .light .toggle {
 
   span {
-    background: #171717;
-    border: 1px solid #171717;
 
     &:after {
-      background: #484848;
-      left: 4px;
+      left: 6px;
     }
   }
 
@@ -30,22 +33,19 @@
 .dark .toggle {
 
   span {
-  background: #FFFFFF;
-  border: 1px solid #FFFFFF;
 
-  &:after {
-    background: #C6C8C7;
-    left: 42px;
+    &:after {
+      left: 44px;
+    }
   }
 
-}
-.sun {
-  display: none;
-}
+  .sun {
+    display: none;
+  }
 
-.moon {
-  left: 8px;
-}
+  .moon {
+    left: 8px;
+  }
 }
 
 html:not(.dark):not(.light) {
@@ -54,12 +54,9 @@ html:not(.dark):not(.light) {
 
     .toggle {
       span {
-      background: #FFFFFF;
-      border: 1px solid #FFFFFF;
 
       &:after {
-        background: #C6C8C7;
-        left: 42px;
+        left: 44px;
       }
     }
     .sun {
@@ -77,12 +74,9 @@ html:not(.dark):not(.light) {
     .toggle {
 
       span {
-        background: #171717;
-        border: 1px solid #171717;
 
         &:after {
-          background: #484848;
-          left: 4px;
+          left: 6px;
         }
       }
 
@@ -105,6 +99,14 @@ html:not(.dark):not(.light) {
 
   &:hover {
     cursor: pointer;
+
+    span {
+      border-color: var(--toggle-hover);
+
+      &:after {
+        background: var(--toggle-hover);
+      }
+    }
   }
 
   span {
@@ -113,16 +115,19 @@ html:not(.dark):not(.light) {
     width: 100%;
     height: 38px;
     border-radius: 19px;
+    transition: all 0.3s;
+    border: 1px solid var(--toggle-color);
 
     &:after {
       content: '';
       position: absolute;
-      top: 4px;
-      width: 28px;
-      height: 28px;
+      top: 6px;
+      width: 24px;
+      height: 24px;
       border-radius: 14px;
       transition: all 0.3s;
       z-index: 1;
+      background: var(--toggle-color);
     }
   }
 

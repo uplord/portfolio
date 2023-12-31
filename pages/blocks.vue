@@ -55,11 +55,13 @@
         }]" />
 
         <BlockSection :visible="sections[1].visible" :sections="[{
-          image: 'https://picsum.photos/1200/1480',
-          image_width: 1200,
-          image_height: 1480,
+          image: {
+            src: 'https://picsum.photos/1200/1480',
+            width: 1200,
+            height: 1480,
+          },
           subtitle: 'About Michael Allen',
-            title: 'Front End Development',
+          title: 'Front End Development',
           content: '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
           buttons: [{
             text: 'Button',
