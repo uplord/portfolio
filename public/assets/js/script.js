@@ -28,7 +28,9 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
 })
 
 window.addEventListener('scroll', function() {
-  if (document.body.classList.contains('sticky')) {
+  if (document.body.classList.contains('sticky') && (window.innerWidth > 741)) {
     document.documentElement.classList.toggle('scrolled', window.scrollY > 0)
+  } else {
+    document.documentElement.classList.remove('scrolled')
   }
 })
