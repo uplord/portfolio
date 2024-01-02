@@ -171,6 +171,11 @@
       animation-name: fadeIn;
     }
 
+    .show-text.image-loaded .floating-image img {
+      animation: floatUp 6s ease-in-out infinite;
+      opacity: 1;
+    }
+
     .floating-image img {
       opacity: 0;
     }
@@ -445,6 +450,8 @@
 
         h3,
         .h3 {
+          font-weight: 500;
+          color: var(--text-color);
 
           @media (max-width: 900px) and (min-width: 641px) {
             font-size: 22px;
@@ -648,5 +655,17 @@
   100% {
     opacity: 1;
     ransform: scale(1);
+  }
+}
+
+@keyframes floatUp {
+  0%,100%,50% {
+    transform:translateY(0) rotate(0)
+  }
+  25% {
+    transform:translateY(1.5%) rotate(.01deg)
+  }
+  75% {
+    transform:translateY(-1.5%) rotate(.01deg)
   }
 }
