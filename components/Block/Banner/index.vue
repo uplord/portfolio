@@ -9,7 +9,6 @@
           'show-image': slide.show_image == true,
           'show-text': slide.show_text == true,
           'top': slide.top == true,
-          'image-loaded': slide.image_loaded == true
         }
       ]">
         <div class="image-wrap" v-if="slide.image && slide.image.floating != true">
@@ -127,8 +126,6 @@ export default {
           if (vm.slides.length > 1) {
             // Add auto scroll
           }
-
-          first_slide.image_loaded = true
         }, 600);
 
       } else {
@@ -136,8 +133,6 @@ export default {
         if (vm.all_slides.length > 1) {
           vm.controls = true
         }
-
-        first_slide.image_loaded = true
 
         vm.sliding = false
       }
@@ -217,9 +212,6 @@ export default {
           setTimeout(function() {
             vm.paused = false
             vm.sliding = false
-
-            old_slide.image_loaded = false
-            new_slide.image_loaded = true
           }, 1500);
         }
       }
