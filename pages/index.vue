@@ -47,6 +47,7 @@
               link: 'mailto:michael@uplord.co.uk',
               class: 'large'
             }],
+            class: 'about-me'
           }]"
         />
 
