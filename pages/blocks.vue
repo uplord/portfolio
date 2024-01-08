@@ -14,10 +14,12 @@
 
         <BlockBanner animate="true" :visible="sections[0].visible" :slides="[{
           image: {
-            srcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
-            srcset_mobile: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
-            src: '/assets/images/main.webp',
+            src: '/assets/images/main.png',
+            width: 500,
+            height: 500,
+            title: 'Banner Michael Allen Image',
             floating: true,
+            sizes: 'sm:140px md:550px'
           },
           title: 'A Senior Front End Developer based in Dundee, Scotland',
           subtitle: 'With 8 years in the industry creating websites',
@@ -145,12 +147,12 @@
           :visible="sections[5].visible"
           title="Promo"
           :promo="{
-            'title': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'content': 'Lorem ipsum dolor sit amet consectetur adipiscing elit faucibus lorem sit tortor nascetur et sed tincidunt sollicitudin facilisi tempus neque feugiat tempor mattis accumsan',
-            'buttons': [{
-              'text': 'Get in touch',
+            title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+            content: 'Lorem ipsum dolor sit amet consectetur adipiscing elit faucibus lorem sit tortor nascetur et sed tincidunt sollicitudin facilisi tempus neque feugiat tempor mattis accumsan',
+            buttons: [{
+              text: 'Get in touch',
               link: 'mailto:michael@uplord.co.uk',
-              'class': 'white large'
+              class: 'white large'
             }],
             class: ''
           }"
