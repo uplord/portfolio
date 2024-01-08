@@ -12,17 +12,22 @@
         }
       ]">
         <div class="image-wrap" v-if="slide.image && slide.image.floating != true">
-          <picture>
-            <source :srcset="slide.image.src_mobile" media="(max-width: 640px)">
-            <img :src="slide.image.src" :alt="slide.image.title" />
-          </picture>
+          <NuxtImg :src="slide.image.src" :alt="slide.image.title" />
         </div>
 
         <div class="placeholder" v-else></div>
 
         <div class="text-content" :class="{ 'has-floating': slide.image.floating == true }">
           <div class="floating-image" v-if="slide.image.floating == true">
-            <NuxtImg :src="slide.image.src" :sizes="slide.image.sizes" format="webp" fit="outside" :alt="slide.image.title" :loading="key != 0 ? 'lazy' : ''" :width="slide.image.width" :height="slide.image.height" />
+            <NuxtImg 
+              :src="slide.image.src"
+              :sizes="slide.image.sizes"
+              format="webp"
+              fit="outside"
+              :alt="slide.image.title"
+              :width="slide.image.width"
+              :height="slide.image.height"
+            />
           </div>
 
           <div class="text-wrap">

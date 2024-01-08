@@ -10,7 +10,15 @@
       ]">
 
         <div class="image-wrap" v-if="section.image">
-          <NuxtImg :src="section.image.src" :sizes="section.image.sizes" format="webp" fit="outside" :alt="section.image.title" loading="lazy" :width="section.image.width" :height="section.image.height" />
+          <NuxtImg 
+            :src="section.image.src"
+            :sizes="section.image.sizes"
+            format="webp"
+            fit="outside"
+            :alt="section.image.title"
+            :width="section.image.width"
+            :height="section.image.height"
+          />
         </div>
 
         <div class="text-wrap inner-container">

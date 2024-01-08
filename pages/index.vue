@@ -291,30 +291,14 @@
           },
         ],
         link: [{
-            rel: 'icon',
-            type: 'image/png',
-            sizes: '32x32',
-            href: '/assets/images/favicon.png'
-          },{
-            rel: 'apple-touch-icon"',
-            sizes: '180x18',
-            href: '/assets/images/appletouch.png'
-          },{
-          rel: 'preload',
-          fetchpriority: "high",
-          as: 'image',
-          type: 'image/webp',
-          href: '/assets/images/main_m.webp',
-          imagesrcset: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
-          media: '(max-width: 640px)'
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/assets/images/favicon.png'
         },{
-          rel: 'preload',
-          fetchpriority: "high",
-          as: 'image',
-          type: 'image/webp',
-          href: '/assets/images/main.webp',
-          imagesrcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
-          media: '(min-width: 641px)'
+          rel: 'apple-touch-icon"',
+          sizes: '180x18',
+          href: '/assets/images/appletouch.png'
         }],
         htmlAttrs: {
           lang: 'en'
