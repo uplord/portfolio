@@ -9,13 +9,12 @@
           :visible="sections[0].visible"
           :slides="[{
             image: {
-              src: '/assets/images/main.webp',
-              srcset: '/assets/images/main.webp, /assets/images/main@2x.webp 2x',
-              srcset_mobile: '/assets/images/main_m.webp, /assets/images/main_m@2x.webp 2x',
+              src: '/assets/images/main.png',
               width: 500,
               height: 500,
               title: 'Banner Michael Allen Image',
               floating: true,
+              sizes: 'sm:140px md:550px'
             },
             title: 'Hi I\'m Michael a Senior Front End Developer based in Dundee, Scotland',
             subtitle: 'With 8 years in the industry creating websites',
@@ -33,11 +32,10 @@
           :sections="[{
             image: {
               src: '/assets/images/about.png',
-              srcset: '/assets/images/about.webp, /assets/images/about@2x.webp 2x',
-              srcset_mobile: '/assets/images/about_m.webp, /assets/images/about_m@2x.webp 2x',
               width: 660,
               height: 814,
-              title: 'About Michael Allen Image'
+              title: 'About Michael Allen Image',
+              sizes: 'sm:220px md:660px'
             },
             subtitle: 'About Michael Allen',
             title: 'Front End Development',

@@ -10,11 +10,7 @@
       ]">
 
         <div class="image-wrap" v-if="section.image">
-          <picture>
-            <source media="(max-width: 640px)" :srcset="section.image.srcset_mobile" v-if="section.image.srcset_mobile" />
-            <source media="(min-width: 641px)" :srcset="section.image.srcset" v-if="section.image.srcset" />
-            <img :src="section.image.src" :alt="section.image.title" loading="lazy" :width="section.image.width" :height="section.image.height" />
-          </picture>
+          <NuxtImg :src="section.image.src" :sizes="section.image.sizes" format="webp" fit="outside" :alt="section.image.title" loading="lazy" :width="section.image.width" :height="section.image.height" />
         </div>
 
         <div class="text-wrap inner-container">

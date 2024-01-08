@@ -22,7 +22,7 @@
         ]"
       >
         <div class="image-wrap" v-if="card.image">
-          <NuxtImg :src="card.image" size="xs:136px" format="webp" :alt="card.title" loading="lazy" :width="card.image_width" :height="card.image_height" />
+          <NuxtImg :src="card.image" sizes="xs:136px sm:326px" format="webp" fit="outside" :alt="card.title" loading="lazy" :width="card.image_width" :height="card.image_height" />
         </div>
 
         <div class="image-wrap svg-wrap" v-if="card.svg">
