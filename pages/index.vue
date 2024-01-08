@@ -249,12 +249,48 @@
 
 <script>
 
+  const title = 'Michael Allen - Front End Developer'
+  const description = 'Experienced Front End Developer with 8 years of expertise, showcasing excellent collaboration, organization, and teamwork skills. Passionate about HTML, CSS, and JavaScript, I thrive on creating exceptional websites. My strong analytical, debugging, and problem-solving abilities have successfully served both small and large clients. Always open to exploring new technologies for innovative web solutions.'
+
   export default {
     setup () {
       useHead({
-        title: 'Michael Allen - Front End Developer',
+        title: title,
         meta: [
-          { name: 'description', content: 'Experienced Front End Developer with 8 years of expertise, showcasing excellent collaboration, organization, and teamwork skills. Passionate about HTML, CSS, and JavaScript, I thrive on creating exceptional websites. My strong analytical, debugging, and problem-solving abilities have successfully served both small and large clients. Always open to exploring new technologies for innovative web solutions.' }
+          {
+            name: 'description',
+            content: description
+          },
+          {
+            hid: 'og-type',
+            property: 'og:type',
+            content: 'website'
+          },
+          {
+            hid: 'og-title',
+            property: 'og:title',
+            content: title
+          },
+          {
+            hid: 'og-desc',
+            property: 'og:description',
+            content: description
+          },
+          {
+            hid: 'og-image',
+            property: 'og:image',
+            content: '/assets/images/og_image.png'
+          },
+          {
+            hid: 'og-url',
+            property: 'og:url',
+            content: 'https://themichael.co.uk/'
+          },
+          {
+            hid: 't-type',
+            name: 'twitter:card',
+            content: 'summary_large_image'
+          },
         ],
         link: [{
           rel: 'preload',

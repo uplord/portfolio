@@ -8,13 +8,5 @@
 
 <script>
 export default {
-  head: {
-    htmlAttrs: {
-      lang: 'en',
-    },
-    bodyAttrs: {
-      class: 'aaa'
-    }
-  },
 }
 </script>
