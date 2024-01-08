@@ -293,6 +293,15 @@
           },
         ],
         link: [{
+            rel: 'icon',
+            type: 'image/png',
+            sizes: '32x32',
+            href: '/assets/images/favicon.png'
+          },{
+            rel: 'apple-touch-icon"',
+            sizes: '180x18',
+            href: '/assets/images/appletouch.png'
+          },{
           rel: 'preload',
           fetchpriority: "high",
           as: 'image',
