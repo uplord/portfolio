@@ -9,14 +9,14 @@
           :slides="[
             {
               image: {
-                src: '/assets/images/main.png',
+                src: '/assets/images/main.jpg',
                 width: 500,
                 height: 500,
                 title: 'Banner Michael Allen Image',
                 floating: true,
                 sizes: 'sm:140px md:550px'
               },
-              leading: 'Hi I\'m Michael',
+              leading: 'Hi, I\'m Michael',
               title: 'A Senior Front End Developer based in Dundee, Scotland',
               subtitle: 'With 8 years in the industry creating websites',
               buttons: [
@@ -50,7 +50,7 @@
                 {
                   text: 'Get in touch',
                   link: 'mailto:michael@uplord.co.uk',
-                  class: 'large'
+                  class: ''
                 }
               ],
               class: 'about-me'
@@ -172,7 +172,7 @@
                 {
                   text: 'Get in touch',
                   link: 'mailto:michael@uplord.co.uk',
-                  class: 'large'
+                  class: ''
                 }
               ],
               class: 'flex-start sticky',
