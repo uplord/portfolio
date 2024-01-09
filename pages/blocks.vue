@@ -119,19 +119,16 @@
         <BlockIcons :visible="sections[4].visible"
           title="Timeline Icons"
           :icons="[{
-            //image: 'https://picsum.photos/80',
             subtitle: '2023',
             title: 'Title',
             content: '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit faucibus lorem sit tortor nascetur et sed tincidunt sollicitudin facilisi tempus neque feugiat tempor mattis accumsan.</p>',
             class: 'alignwide'
           },{
-            //image: 'https://picsum.photos/80',
             subtitle: '2022',
             title: 'Title',
             content: '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit faucibus lorem sit tortor nascetur et sed tincidunt sollicitudin facilisi tempus neque feugiat tempor mattis accumsan.</p>',
             class: ''
           },{
-            //image: 'https://picsum.photos/80',
             subtitle: '2021',
             title: 'Title',
             content: '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit faucibus lorem sit tortor nascetur et sed tincidunt sollicitudin facilisi tempus neque feugiat tempor mattis accumsan.</p>',
@@ -140,7 +137,6 @@
           stacked="true"
           classes="alignwide"
         />
-
 
         <BlockPromo
           id="promo"
@@ -165,7 +161,69 @@
 
 <script>
 
+  const meta = {
+    title: 'Michael Allen - Blocks',
+    description: 'Experienced Front End Developer with 8 years of expertise, showcasing excellent collaboration, organization, and teamwork skills. Passionate about HTML, CSS, and JavaScript, I thrive on creating exceptional websites. My strong analytical, debugging, and problem-solving abilities have successfully served both small and large clients. Always open to exploring new technologies for innovative web solutions.',
+    type: 'website',
+    image: '/assets/images/og_image.png',
+    url: 'https://themichael.co.uk/blocks',
+  }
+
   export default {
+    setup () {
+      useHead({
+        title: meta.title,
+        meta: [
+          {
+            name: 'description',
+            content: meta.description
+          },
+          {
+            hid: 'og-type',
+            property: 'og:type',
+            content: meta.type
+          },
+          {
+            hid: 'og-title',
+            property: 'og:title',
+            content: meta.title
+          },
+          {
+            hid: 'og-desc',
+            property: 'og:description',
+            content: meta.description
+          },
+          {
+            hid: 'og-image',
+            property: 'og:image',
+            content: meta.image
+          },
+          {
+            hid: 'og-url',
+            property: 'og:url',
+            content: meta.url
+          },
+          {
+            hid: 't-type',
+            name: 'twitter:card',
+            content: 'summary_large_image'
+          },
+        ],
+        link: [{
+          rel: 'icon',
+          type: 'image/png',
+          sizes: '32x32',
+          href: '/assets/images/favicon.png'
+        },{
+          rel: 'apple-touch-icon"',
+          sizes: '180x18',
+          href: '/assets/images/appletouch.png'
+        }],
+        htmlAttrs: {
+          lang: 'en'
+        }
+      })
+    },
     data() {
       return {
         sections: [{
@@ -189,11 +247,7 @@
         }],
       }
     },
-    methods: {
-
-    },
     mounted() {
-
       var vm = this
 
       const observer = new IntersectionObserver((entries, observer) => {
@@ -211,7 +265,7 @@
 
       document.querySelectorAll( '.js_section' ).forEach( function (el, index) {
         el.index = index
-        observer.observe(el);
+        observer.observe(el)
       })
     }
   }

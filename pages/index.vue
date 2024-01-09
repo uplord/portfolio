@@ -247,42 +247,47 @@
 
 <script>
 
-  const title = 'Michael Allen - Front End Developer'
-  const description = 'Experienced Front End Developer with 8 years of expertise, showcasing excellent collaboration, organization, and teamwork skills. Passionate about HTML, CSS, and JavaScript, I thrive on creating exceptional websites. My strong analytical, debugging, and problem-solving abilities have successfully served both small and large clients. Always open to exploring new technologies for innovative web solutions.'
+  const meta = {
+    title: 'Michael Allen - Front End Developer',
+    description: 'Experienced Front End Developer with 8 years of expertise, showcasing excellent collaboration, organization, and teamwork skills. Passionate about HTML, CSS, and JavaScript, I thrive on creating exceptional websites. My strong analytical, debugging, and problem-solving abilities have successfully served both small and large clients. Always open to exploring new technologies for innovative web solutions.',
+    type: 'website',
+    image: '/assets/images/og_image.png',
+    url: 'https://themichael.co.uk/',
+  }
 
   export default {
     setup () {
       useHead({
-        title: title,
+        title: meta.title,
         meta: [
           {
             name: 'description',
-            content: description
+            content: meta.description
           },
           {
             hid: 'og-type',
             property: 'og:type',
-            content: 'website'
+            content: meta.type
           },
           {
             hid: 'og-title',
             property: 'og:title',
-            content: title
+            content: meta.title
           },
           {
             hid: 'og-desc',
             property: 'og:description',
-            content: description
+            content: meta.description
           },
           {
             hid: 'og-image',
             property: 'og:image',
-            content: '/assets/images/og_image.png'
+            content: meta.image
           },
           {
             hid: 'og-url',
             property: 'og:url',
-            content: 'https://themichael.co.uk/'
+            content: meta.url
           },
           {
             hid: 't-type',
@@ -333,11 +338,7 @@
         }],
       }
     },
-    methods: {
-
-    },
     mounted() {
-
       var vm = this
 
       const observer = new IntersectionObserver((entries, observer) => {
@@ -353,7 +354,7 @@
 
       document.querySelectorAll( '.js_section' ).forEach( function (el, index) {
         el.index = index
-        observer.observe(el);
+        observer.observe(el)
       })
     }
   }
