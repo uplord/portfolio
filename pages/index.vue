@@ -16,8 +16,8 @@
                 floating: true,
                 sizes: 'sm:140px md:550px'
               },
-              title:
-                'Hi I\'m Michael a Senior Front End Developer based in Dundee, Scotland',
+              leading: 'Hi I\'m Michael',
+              title: 'A Senior Front End Developer based in Dundee, Scotland',
               subtitle: 'With 8 years in the industry creating websites',
               buttons: [
                 {

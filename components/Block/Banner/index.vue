@@ -51,9 +51,12 @@
           </div>
 
           <div class="text-wrap">
-            <h1 v-if="key == 0">{{ slide.title }}</h1>
-            <h2 v-if="key == 0" class="h3">{{ slide.subtitle }}</h2>
+            <h1 v-if="key == 0">
+              <span v-if="slide.leading">{{ slide.leading }}</span
+              >{{ slide.title }}
+            </h1>
             <h2 v-if="key != 0" class="h1">{{ slide.title }}</h2>
+            <h2 v-if="key == 0" class="h3">{{ slide.subtitle }}</h2>
             <h3 v-if="key != 0">{{ slide.subtitle }}</h3>
             <BaseButtons :buttons="slide.buttons" />
           </div>
