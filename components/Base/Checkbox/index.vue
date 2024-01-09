@@ -2,11 +2,11 @@
   <div class="field">
     <label v-if="title">{{ title }}</label>
     <div class="input-wrap">
-      <div class="checkbox" :class="{ 'switch': switch_mode == 'true' }">
+      <div class="checkbox" :class="{ switch: switchMode == 'true' }">
         <input
+          :id="id"
           type="checkbox"
           :checked="modelValue"
-          :id="id"
           :disabled="disabled == 'true' || disabled == true"
           @change="$emit('update:modelValue', $event.target.checked)"
         />
@@ -39,15 +39,16 @@ export default {
       type: Boolean,
       dafault: ''
     },
-    switch_mode: {
+    switchMode: {
       type: [String, Boolean],
       default: false
     }
-  }
+  },
+  emits: ['update:modelValue']
 }
 </script>
 
 <style lang="less" scoped>
-  @import '../style';
-  @import 'style';
+@import '../style';
+@import 'style';
 </style>

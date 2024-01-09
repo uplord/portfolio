@@ -1,42 +1,73 @@
 <template>
-  <div class="block icon-block" :class="[ classes, { 'js_section': hide_animation != 'true', 'visible': visible == true } ]">
-
-    <div class="text-wrap" v-if="title">
+  <div
+    class="block icon-block"
+    :class="[
+      classes,
+      { js_section: hideAnimation != 'true', visible: visible == true }
+    ]"
+  >
+    <div v-if="title" class="text-wrap">
       <h2>{{ title }}</h2>
     </div>
 
-    <div class="icons" :class="[{ 'stacked': stacked == 'true', 'variable': variable == 'true' }]">
-      <div v-for="(icon, key) in all_icons" :key="key" ref="icon_block" class="icon js_article" :class="[
-        icon.class,
-        {
-          'visible': icon.visible == true,
-          'svg-icon': icon.svg
-        }
-      ]">
-        <div class="image-wrap" v-if="icon.image">
-          <NuxtImg :src="icon.image" format="webp" :alt="icon.title" loading="lazy" />
+    <div
+      class="icons"
+      :class="[{ stacked: stacked == 'true', variable: variable == 'true' }]"
+    >
+      <div
+        v-for="(icon, key) in allIcons"
+        :key="key"
+        ref="icon_block"
+        class="icon js_article"
+        :class="[
+          icon.class,
+          {
+            visible: icon.visible == true,
+            'svg-icon': icon.svg
+          }
+        ]"
+      >
+        <div v-if="icon.image" class="image-wrap">
+          <NuxtImg
+            :src="icon.image"
+            format="webp"
+            :alt="icon.title"
+            loading="lazy"
+          />
         </div>
 
-        <div class="svg-wrap" v-if="icon.svg ">
+        <div v-if="icon.svg" class="svg-wrap">
           <nuxt-icon :name="icon.svg" filled />
         </div>
 
-        <div class="text-wrap inner-container" v-if="icon.title || icon.content">
-          <h3 class="h4 primary" v-if="icon.subtitle">{{ icon.subtitle }}</h3>
-          <h4 class="h3" v-if="icon.title">{{ icon.title }}</h4>
+        <div
+          v-if="icon.title || icon.content"
+          class="text-wrap inner-container"
+        >
+          <h3 v-if="icon.subtitle" class="h4 primary">{{ icon.subtitle }}</h3>
+          <h4 v-if="icon.title" class="h3">{{ icon.title }}</h4>
 
-          <a :href="icon.logo.url" target="_blank" class="logo-wrap" v-if="icon.logo" :aria-label="icon.logo.title">
+          <a
+            v-if="icon.logo"
+            :href="icon.logo.url"
+            target="_blank"
+            class="logo-wrap"
+            :aria-label="icon.logo.title"
+          >
             <nuxt-icon :name="icon.logo.src" filled />
           </a>
 
-          <div class="inner-container" v-html="icon.content" v-if="icon.content"></div>
+          <div
+            v-if="icon.content"
+            class="inner-container"
+            v-html="icon.content"
+          ></div>
         </div>
 
-        <div class="tooltip" v-if="icon.tooltip">{{ icon.tooltip }}</div>
+        <div v-if="icon.tooltip" class="tooltip">{{ icon.tooltip }}</div>
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -48,43 +79,43 @@ export default {
     'icons',
     'stacked',
     'variable',
-    'hide_animation'
+    'hideAnimation'
   ],
   data() {
     return {
-      all_icons: this.icons
+      allIcons: this.icons
     }
-  },
-  mounted() {
-
   },
   watch: {
     visible(value) {
-      var vm = this
+      const vm = this
 
       if (value == true) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                vm.allIcons[entry.target.index].visible = true
+              }
+            })
+          },
+          {
+            threshold: 0,
+            rootMargin: '0px 0px -100px 0px'
+          }
+        )
 
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-              vm.all_icons[entry.target.index].visible = true
-            }
-          });
-        }, {
-          threshold: 0,
-          rootMargin: "0px 0px -100px 0px",
-        });
-
-        this.$refs.icon_block.forEach( function (el, index) {
+        this.$refs.icon_block.forEach(function (el, index) {
           el.index = index
-          observer.observe(el);
+          observer.observe(el)
         })
       }
     }
   },
+  mounted() {}
 }
 </script>
 
 <style lang="less">
-  @import 'style';
+@import 'style';
 </style>

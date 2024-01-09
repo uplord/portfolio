@@ -1,30 +1,38 @@
 <template>
-  <button type="submit" class="button" :class="button.class" v-if="button.type == 'submit'">
+  <button
+    v-if="button.type == 'submit'"
+    type="submit"
+    class="button"
+    :class="button.class"
+  >
     {{ button.text }}
   </button>
 
-  <a :href="button.link" class="button" :class="button.class" v-else-if="button.link">
+  <a
+    v-else-if="button.link"
+    :href="button.link"
+    class="button"
+    :class="button.class"
+  >
     {{ button.text }}
   </a>
 
-  <div class="button" :class="button.class" v-else>
+  <div v-else class="button" :class="button.class">
     {{ button.text }}
   </div>
 </template>
 
 <script>
-  export default {
-    props: [
-      'button',
-      'key'
-    ],
-    data() {
-      return {
-
-      }
-    },
-    methods: {
-
-    },
-  }
+export default {
+  props: {
+    button: {
+      type: Object,
+      default: null
+    }
+  },
+  data() {
+    return {}
+  },
+  methods: {}
+}
 </script>

@@ -4,9 +4,9 @@
     <div class="input-wrap radio-group">
       <div class="radio">
         <input
+          :id="id"
           type="radio"
           :checked="modelValue === value"
-          :id="id"
           :disabled="disabled == 'true' || disabled == true"
           :value="value"
           v-bind="$attrs"
@@ -45,11 +45,12 @@ export default {
       type: [String, Number],
       required: true
     }
-  }
+  },
+  emits: ['update:modelValue']
 }
 </script>
 
 <style lang="less" scoped>
-  @import '../style';
-  @import 'style';
+@import '../style';
+@import 'style';
 </style>

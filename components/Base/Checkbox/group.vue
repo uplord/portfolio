@@ -1,18 +1,18 @@
 <template>
   <div class="field">
-    <div class="label" v-if="title">{{ title }}</div>
-    <div class="input-wrap checkbox-group" :class="{ 'horizontal' : horizontal == 'true' }">
-      <div class="checkbox"
-        v-for="option in options"
-        :key="option.value"
-      >
+    <div v-if="title" class="label">{{ title }}</div>
+    <div
+      class="input-wrap checkbox-group"
+      :class="{ horizontal: horizontal == 'true' }"
+    >
+      <div v-for="option in options" :key="option.value" class="checkbox">
         <BaseCheckbox
+          :id="option.id"
           :label="option.label"
           :value="option.value"
-          :modelValue="option.modelValue"
-          :id="option.id"
+          :model-value="option.modelValue"
           :disabled="option.disabled"
-          @update:modelValue="$emit('update:modelValue', $event)"
+          @update:model-value="$emit('update:modelValue', $event)"
         />
       </div>
     </div>
@@ -34,11 +34,12 @@ export default {
       type: [String, Boolean],
       default: false
     }
-  }
+  },
+  emits: ['update:modelValue']
 }
 </script>
 
 <style lang="less" scoped>
-  @import '../style';
-  @import 'style';
+@import '../style';
+@import 'style';
 </style>

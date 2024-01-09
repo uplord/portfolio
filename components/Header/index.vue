@@ -1,7 +1,6 @@
 <template>
   <header class="header alignmax">
     <div class="container alignwide">
-
       <NuxtLink to="/" class="logo">
         <span class="m">M</span>The<span class="red">Michael</span>
       </NuxtLink>
@@ -29,11 +28,10 @@
       <div class="right">
         <BaseThemeToggle />
       </div>
-
     </div>
   </header>
 </template>
 
 <style lang="less">
-  @import 'style';
+@import 'style';
 </style>

@@ -1,5 +1,10 @@
 <template>
-  <footer class="footer" :class="[ { 'js_footer': animate == 'true', 'visible': sections[0].visible == true } ]">
+  <footer
+    class="footer"
+    :class="[
+      { js_footer: animate == 'true', visible: sections[0].visible == true }
+    ]"
+  >
     <ul class="navigation">
       <li><a href="/">Home</a></li>
       <li><a href="/styleguide">Styleguide</a></li>
@@ -8,12 +13,20 @@
 
     <ul class="social-icons">
       <li>
-        <NuxtLink to="https://www.instagram.com/michael.adam.allen/" target="_blank" aria-label="Instagram">
+        <NuxtLink
+          to="https://www.instagram.com/michael.adam.allen/"
+          target="_blank"
+          aria-label="Instagram"
+        >
           <nuxt-icon name="instagram" filled />
         </NuxtLink>
       </li>
       <li>
-        <NuxtLink to="https://www.linkedin.com/in/themichael/" target="_blank" aria-label="Linkedin">
+        <NuxtLink
+          to="https://www.linkedin.com/in/themichael/"
+          target="_blank"
+          aria-label="Linkedin"
+        >
           <nuxt-icon name="linkedin-in" filled />
         </NuxtLink>
       </li>
@@ -27,45 +40,48 @@
 </template>
 
 <script>
-
-  export default {
-    props: [
-      'animate',
-    ],
-    data() {
-      return {
-        sections: [{
+export default {
+  props: {
+    animate: {
+      type: [String, Boolean],
+      default: false
+    }
+  },
+  data() {
+    return {
+      sections: [
+        {
           visible: false
-        }],
-      }
-    },
-    methods: {
+        }
+      ]
+    }
+  },
+  mounted() {
+    const vm = this
 
-    },
-    mounted() {
-
-      var vm = this
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry, i) => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             vm.sections[entry.target.index].visible = true
           }
-        });
-      }, {
+        })
+      },
+      {
         threshold: 0,
-        rootMargin: "0px 0px 50px 0px",
-      });
+        rootMargin: '0px 0px 50px 0px'
+      }
+    )
 
-      document.querySelectorAll( '.js_footer' ).forEach( function (el, index) {
-        el.index = index
-        observer.observe(el);
-      })
-    }
-  }
+    document.querySelectorAll('.js_footer').forEach(function (el, index) {
+      el.index = index
+      observer.observe(el)
+    })
+  },
+  methods: {}
+}
 </script>
 
-
 <style lang="less">
-  @import 'style';
+@import 'style';
 </style>

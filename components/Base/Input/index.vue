@@ -4,12 +4,12 @@
     <div class="input-wrap">
       <input
         v-bind="$attrs"
-        :value="modelValue"
         :id="id"
+        :value="modelValue"
         :disabled="disabled == 'true'"
         :placeholder="placeholder"
-        @input="$emit('update:modelValue', $event.target.value)"
         class="input"
+        @input="$emit('update:modelValue', $event.target.value)"
       />
     </div>
   </div>
@@ -36,13 +36,14 @@ export default {
     },
     modelValue: {
       type: [String, Number],
-      dafault: ''
+      default: ''
     }
-  }
+  },
+  emits: ['update:modelValue']
 }
 </script>
 
 <style lang="less" scoped>
-  @import '../style';
-  @import 'style';
+@import '../style';
+@import 'style';
 </style>

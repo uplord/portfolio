@@ -1,25 +1,45 @@
 <template>
-  <div :id="id" class="banner alignmax" :class="[ slides_text, { 'animate js_section': set_animate == true || animate == 'true', 'visible': set_visible == true } ]">
+  <div
+    :id="id"
+    class="banner alignmax"
+    :class="[
+      slides_text,
+      {
+        'animate js_section': set_animate == true || animate == 'true',
+        visible: set_visible == true
+      }
+    ]"
+  >
     <div class="slides" :class="{ 'has-multiple': all_slides.length > 1 }">
-
-      <div class="slide" v-for="(slide, key) in all_slides" :key="key" :class="[
-        slide.class,
-        {
-          'active' : slide.active == true,
-          'show-image': slide.show_image == true,
-          'show-text': slide.show_text == true,
-          'top': slide.top == true,
-        }
-      ]">
-        <div class="image-wrap" v-if="slide.image && slide.image.floating != true">
+      <div
+        v-for="(slide, key) in all_slides"
+        :key="key"
+        class="slide"
+        :class="[
+          slide.class,
+          {
+            active: slide.active == true,
+            'show-image': slide.show_image == true,
+            'show-text': slide.show_text == true,
+            top: slide.top == true
+          }
+        ]"
+      >
+        <div
+          v-if="slide.image && slide.image.floating != true"
+          class="image-wrap"
+        >
           <NuxtImg :src="slide.image.src" :alt="slide.image.title" />
         </div>
 
-        <div class="placeholder" v-else></div>
+        <div v-else class="placeholder"></div>
 
-        <div class="text-content" :class="{ 'has-floating': slide.image.floating == true }">
-          <div class="floating-image" v-if="slide.image.floating == true">
-            <NuxtImg 
+        <div
+          class="text-content"
+          :class="{ 'has-floating': slide.image.floating == true }"
+        >
+          <div v-if="slide.image.floating == true" class="floating-image">
+            <NuxtImg
               :src="slide.image.src"
               :sizes="slide.image.sizes"
               format="webp"
@@ -32,35 +52,41 @@
 
           <div class="text-wrap">
             <h1 v-if="key == 0">{{ slide.title }}</h1>
-            <h2 class="h3" v-if="key == 0">{{ slide.subtitle }}</h2>
-            <h2 class="h1" v-if="key != 0">{{ slide.title }}</h2>
+            <h2 v-if="key == 0" class="h3">{{ slide.subtitle }}</h2>
+            <h2 v-if="key != 0" class="h1">{{ slide.title }}</h2>
             <h3 v-if="key != 0">{{ slide.subtitle }}</h3>
-            <BaseButtons
-              :buttons="slide.buttons"
-            />
+            <BaseButtons :buttons="slide.buttons" />
           </div>
         </div>
       </div>
 
-      <div class="controls" :class="{ 'show': controls == true }">
-        <div v-for="(slide, key) in slides" :key="key" v-on:click="changeSlide(key)" class="dot" :class="{ 'active' : key == current_slide }"></div>
+      <div class="controls" :class="{ show: controls == true }">
+        <div
+          v-for="(slide, key) in slides"
+          :key="key"
+          class="dot"
+          :class="{ active: key == current_slide }"
+          @click="changeSlide(key)"
+        ></div>
       </div>
 
-      <div class="arrow prev" v-on:click="changeSlide('prev')" :class="{ 'show': controls == true }"></div>
-      <div class="arrow next" v-on:click="changeSlide('next')" :class="{ 'show': controls == true }"></div>
+      <div
+        class="arrow prev"
+        :class="{ show: controls == true }"
+        @click="changeSlide('prev')"
+      ></div>
+      <div
+        class="arrow next"
+        :class="{ show: controls == true }"
+        @click="changeSlide('next')"
+      ></div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
-  props: [
-    'animate',
-    'visible',
-    'slides',
-    'id',
-  ],
+  props: ['animate', 'visible', 'slides', 'id'],
   data() {
     return {
       set_animate: false,
@@ -71,7 +97,19 @@ export default {
       slides_text: null,
       sliding: true,
       paused: false,
-      time: 0,
+      time: 0
+    }
+  },
+  watch: {
+    visible(value) {
+      const vm = this
+
+      if (value == true) {
+        this.set_animate = true
+        this.set_visible = true
+
+        vm.loadSlides()
+      }
     }
   },
   mounted() {
@@ -83,8 +121,7 @@ export default {
   },
   methods: {
     loadSlides() {
-
-      var vm = this,
+      const vm = this,
         header = document.getElementsByClassName('header')[0],
         homepage = document.body.classList.contains('homepage'),
         first_slide = vm.all_slides[0]
@@ -92,7 +129,11 @@ export default {
       first_slide.active = true
       first_slide.show_image = true
 
-      if (first_slide.class && (first_slide.class.includes('dark') || first_slide.class.includes('light'))) {
+      if (
+        first_slide.class &&
+        (first_slide.class.includes('dark') ||
+          first_slide.class.includes('light'))
+      ) {
         header.classList.remove('banner-color')
 
         if (first_slide.class.includes('dark')) {
@@ -113,22 +154,21 @@ export default {
         vm.slides_text = 'is-auto'
       }
       if (vm.set_animate == true) {
-        setTimeout(function() {
+        setTimeout(function () {
           first_slide.show_text = true
 
           if (vm.all_slides.length > 1) {
             vm.controls = true
           }
-        }, 300);
+        }, 300)
 
-        setTimeout(function() {
+        setTimeout(function () {
           vm.sliding = false
 
           if (vm.slides.length > 1) {
             // Add auto scroll
           }
-        }, 600);
-
+        }, 600)
       } else {
         first_slide.show_text = true
         if (vm.all_slides.length > 1) {
@@ -137,10 +177,9 @@ export default {
 
         vm.sliding = false
       }
-
     },
     changeSlide(direction) {
-      var vm = this,
+      let vm = this,
         header = document.getElementsByClassName('header')[0],
         homepage = document.body.classList.contains('homepage'),
         slide = vm.current_slide,
@@ -175,11 +214,15 @@ export default {
           new_slide.active = true
           old_slide.show_text = false
 
-          setTimeout(function() {
+          setTimeout(function () {
             new_slide.show_image = true
             new_slide.top = true
 
-            if (new_slide.class && (new_slide.class.includes('dark') || new_slide.class.includes('light'))) {
+            if (
+              new_slide.class &&
+              (new_slide.class.includes('dark') ||
+                new_slide.class.includes('light'))
+            ) {
               if (header) {
                 header.classList.remove('banner-color')
               }
@@ -197,42 +240,33 @@ export default {
               }
             } else {
               if (header.length) {
-                header.classList.add('banner-color').remove('dark-header').remove('light-header')
+                header.classList
+                  .add('banner-color')
+                  .remove('dark-header')
+                  .remove('light-header')
               }
               vm.slides_text = 'is-auto'
             }
-          }, 600);
+          }, 600)
 
-          setTimeout(function() {
+          setTimeout(function () {
             old_slide.active = false
             old_slide.show_image = false
             new_slide.show_text = true
             new_slide.top = false
-          }, 1200);
+          }, 1200)
 
-          setTimeout(function() {
+          setTimeout(function () {
             vm.paused = false
             vm.sliding = false
-          }, 1500);
+          }, 1500)
         }
       }
     }
-  },
-  watch: {
-    visible(value) {
-      var vm = this
-
-      if (value == true) {
-        this.set_animate = true
-        this.set_visible = true
-
-        vm.loadSlides()
-      }
-    }
-  },
+  }
 }
 </script>
 
 <style lang="less">
-  @import 'style';
+@import 'style';
 </style>

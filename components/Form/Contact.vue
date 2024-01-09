@@ -3,25 +3,21 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        form: {
-          full_name: '',
-          email: '',
-          message: ''
-        }
+export default {
+  data() {
+    return {
+      form: {
+        full_name: '',
+        email: '',
+        message: ''
       }
-    },
-    methods: {
-
-    },
-    mounted() {
-
     }
-  }
+  },
+  mounted() {},
+  methods: {}
+}
 </script>
 
 <style lang="less">
-  @import 'style';
+@import 'style';
 </style>

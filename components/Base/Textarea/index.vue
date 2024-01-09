@@ -4,12 +4,12 @@
     <div class="input-wrap">
       <textarea
         v-bind="$attrs"
-        :value="modelValue"
         :id="id"
+        :value="modelValue"
         :disabled="disabled == 'true'"
         :placeholder="label"
-        @input="$emit('update:modelValue', $event.target.value)"
         class="input"
+        @input="$emit('update:modelValue', $event.target.value)"
       ></textarea>
     </div>
   </div>
@@ -32,13 +32,14 @@ export default {
     },
     modelValue: {
       type: [String, Number],
-      dafault: ''
+      default: ''
     }
-  }
+  },
+  emits: ['update:modelValue']
 }
 </script>
 
 <style lang="less" scoped>
-  @import '../style';
-  @import 'style';
+@import '../style';
+@import 'style';
 </style>

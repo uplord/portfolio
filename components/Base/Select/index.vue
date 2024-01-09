@@ -3,20 +3,24 @@
     <label v-if="label && id" :for="id">{{ label }}</label>
     <div class="input-wrap select-wrap">
       <select
+        :id="id"
         class="input"
         :value="modelValue"
-        :id="id"
         v-bind="{
           ...$attrs,
-          onChange: ($event) => { $emit('update:modelValue', $event.target.value) }
+          onChange: ($event) => {
+            $emit('update:modelValue', $event.target.value)
+          }
         }"
       >
         <option
           v-for="option in options"
-          :value="option"
           :key="option"
+          :value="option"
           :selected="option === modelValue"
-        >{{ option }}</option>
+        >
+          {{ option }}
+        </option>
       </select>
     </div>
   </div>
@@ -35,17 +39,18 @@ export default {
     },
     modelValue: {
       type: [String, Number],
-      dafault: ''
+      default: ''
     },
     options: {
       type: Array,
       required: true
     }
-  }
+  },
+  emits: ['update:modelValue']
 }
 </script>
 
 <style lang="less">
-  @import '../style';
-  @import 'style';
+@import '../style';
+@import 'style';
 </style>
