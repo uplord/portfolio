@@ -23,7 +23,7 @@
                 {
                   text: 'Get in touch',
                   link: 'mailto:michael@uplord.co.uk',
-                  class: 'large'
+                  class: 'primary large'
                 }
               ]
             }
@@ -50,7 +50,7 @@
                 {
                   text: 'Get in touch',
                   link: 'mailto:michael@uplord.co.uk',
-                  class: ''
+                  class: 'primary'
                 }
               ],
               class: 'about-me'
@@ -172,7 +172,7 @@
                 {
                   text: 'Get in touch',
                   link: 'mailto:michael@uplord.co.uk',
-                  class: ''
+                  class: 'primary'
                 }
               ],
               class: 'flex-start sticky',
