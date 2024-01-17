@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     head: {
       script: [
         {
-          //src: '/assets/js/script.js'
+          src: '/assets/js/script.js'
         }
       ]
     }
@@ -33,7 +33,6 @@ export default defineNuxtConfig({
     },
     headers: {
       contentSecurityPolicy: {
-        'script-src': ["'self'"],
         'frame-ancestors': false
       }
     },
