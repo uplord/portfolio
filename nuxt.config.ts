@@ -4,14 +4,7 @@ export default defineNuxtConfig({
   css: ['~/assets/less/style.less'],
   devtools: { enabled: true },
   app: {
-    buildAssetsDir: '/nuxt/',
-    head: {
-      script: [
-        {
-          src: '/assets/js/script.js'
-        }
-      ]
-    }
+    buildAssetsDir: '/nuxt/'
   },
   modules: [
     'nuxt-icons',
