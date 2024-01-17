@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     ],
     'nuxt-security'
   ],
+  plugins: [{ src: '~/plugins/script.js', mode: 'client' }],
   security: {
     nonce: true, // Enables HTML nonce support in SSR mode
     ssg: {
@@ -26,7 +27,8 @@ export default defineNuxtConfig({
     },
     headers: {
       contentSecurityPolicy: {
-        'frame-ancestors': false
+        'frame-ancestors': false,
+        'script-src': ["'nonce-{{nonce}}'", "'strict-dynamic'"]
       }
     },
     sri: true
