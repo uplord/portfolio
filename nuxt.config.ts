@@ -33,6 +33,10 @@ export default defineNuxtConfig({
     },
     headers: {
       contentSecurityPolicy: {
+        'script-src': [
+          "'self'",
+          'https://www.themichael.co.uk/assets/js/script.js'
+        ],
         'frame-ancestors': false
       }
     },
