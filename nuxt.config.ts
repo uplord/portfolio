@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     head: {
       script: [
         {
-          src: '/assets/js/script.js'
+          //src: '/assets/js/script.js'
         }
       ]
     }
