@@ -4,7 +4,14 @@ export default defineNuxtConfig({
   css: ['~/assets/less/style.less'],
   devtools: { enabled: true },
   app: {
-    buildAssetsDir: '/nuxt/'
+    buildAssetsDir: '/nuxt/',
+    head: {
+      script: [
+        {
+          src: '/assets/js/script.js'
+        }
+      ]
+    }
   },
   modules: [
     'nuxt-icons',
@@ -24,13 +31,13 @@ export default defineNuxtConfig({
       hashScripts: true, // Enables CSP hash support for scripts in SSG mode
       hashStyles: false // Disables CSP hash support for styles in SSG mode (recommended)
     },
+    sri: true,
     headers: {
       contentSecurityPolicy: {
         'frame-ancestors': false,
-        'script-src': ["'nonce-{{nonce}}'", "'strict-dynamic'"]
+        'script-src': ["'self'", "'strict-dynamic'"]
       }
-    },
-    sri: true
+    }
   },
   googleFonts: {
     families: {
