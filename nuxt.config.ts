@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     'nuxt-security'
   ],
   security: {
-    nonce: true, // Enables HTML nonce support in SSR mode
+    nonce: false,
     ssg: {
       hashScripts: true, // Enables CSP hash support for scripts in SSG mode
       hashStyles: false // Disables CSP hash support for styles in SSG mode (recommended)
