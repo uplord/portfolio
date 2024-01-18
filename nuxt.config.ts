@@ -22,23 +22,8 @@ export default defineNuxtConfig({
       {
         fix: true
       }
-    ],
-    'nuxt-security'
+    ]
   ],
-  security: {
-    nonce: false,
-    ssg: {
-      hashScripts: true, // Enables CSP hash support for scripts in SSG mode
-      hashStyles: false // Disables CSP hash support for styles in SSG mode (recommended)
-    },
-    sri: true,
-    headers: {
-      contentSecurityPolicy: {
-        'frame-ancestors': false,
-        'script-src': ["'self'", "'strict-dynamic'"]
-      }
-    }
-  },
   googleFonts: {
     families: {
       'DM Sans': [400, 500, 600, 700]
