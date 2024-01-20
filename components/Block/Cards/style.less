@@ -109,6 +109,10 @@ a.card {
       .mobile-2 & {
         width: calc(50% - (16px / 2 * 1));
       }
+
+      .mobile-3 & {
+        width: calc(33.33% - (16px / 3 * 2));
+      }
     }
   }
 
@@ -126,6 +130,10 @@ a.card {
 
       .mobile-2 & {
         width: calc(50% - (16px / 2 * 1));
+      }
+
+      .mobile-3 & {
+        width: calc(33.33% - (16px / 3 * 2));
       }
     }
   }
@@ -217,7 +225,8 @@ a.card {
 
       @media (max-width: 640px) {
 
-        .mobile-2 & {
+        .mobile-2 &,
+        .mobile-3 & {
           font-size: 18px;
         }
       }
