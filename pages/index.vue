@@ -66,7 +66,7 @@
 
         <BlockCards
           id="projects"
-          classes="text-center alignwide mobile-3"
+          classes="text-center alignwide mobile-2"
           :visible="sections[2].visible"
           title="Projects I've Worked On"
           :cards="[
