@@ -67,72 +67,63 @@
             {
               svg: 'brewdog',
               title: 'Brewdog',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'Brewdog'
             },
             {
               svg: 'gdk',
               title: 'German Doner Kebab',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'German Doner Kebab'
             },
             {
               svg: 'subway',
               title: 'Subway',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'Subway'
             },
             {
               svg: 'umbro',
               title: 'Umbro UK',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'Umbro UK'
             },
             {
               svg: 'dundeeunited',
               title: 'Dundee United',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'Dundee United Football Club'
             },
             {
               svg: 'hungrrr',
               title: 'Hungrrr',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'Hungrrr'
             },
             {
               svg: 'snappy',
               title: 'Snappy Shopper',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'Snappy Shopper'
             },
             {
               svg: 'macdonalds',
               title: 'Macdonald Hotels and Resorts',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'Macdonald Hotels and Resorts'
             },
             {
               svg: 'campbells',
               title: 'Campbells Meat',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'Campbells Meat'
             },
@@ -141,8 +132,7 @@
               image_width: 326,
               image_height: 217,
               title: 'Peter Vardy',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'Peter Vardy'
             },
@@ -151,8 +141,7 @@
               image_width: 326,
               image_height: 217,
               title: 'Carmoney',
-              class: 'mini middle text-center',
-              text_hover: false,
+              class: 'mini middle text-center border rounded',
               hide_text: true,
               tooltip: 'CarMoney'
             }

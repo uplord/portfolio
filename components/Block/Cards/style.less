@@ -1,94 +1,29 @@
+@import '/assets/less/core/mixins';
 
-.dark,
-html:not(.dark):not(.light) {
-
-  .card:hover {
-
-    .text-wrap h3 {
-      //color: #000;
-    }
-
-    &.middle .image-wrap:after {
-      //background: #FFF;
-      opacity: 0.6;
-    }
-  }
-}
-
-.block.cards-block {
-  z-index: 1;
+:root {
+  --border-radius: 8px;
 }
 
 .cards {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
 
   @media (max-width: 1100px) {
     gap: 16px;
   }
 }
 
-a.card {
-
-  &:hover {
-    cursor: pointer;
-
-    @media (min-width: 741px) {
-      transform: scale(1.03);
-    }
-
-    .button {
-      pointer-events: none;
-    }
-  }
-}
-
 .card {
-  position: relative;
   display: flex;
   justify-content: center;
-  width: calc(50% - (32px / 2 * 1));
-  transition: transform 0.2s ease;
-  //background: var(--block-color);
-
-  @media (max-width: 640px) {
-    width: 100%;
-  }
-
-  &:hover {
-    z-index: 1000;
-
-    .tooltip {
-      opacity: 1;
-    }
-  }
-
-  &.fixed-height {
-    height: 480px;
-
-    .image-wrap img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  &.hide-text {
-
-    .image-wrap:after {
-      display: none;
-    }
-
-    .text-wrap {
-      display: none;
-    }
-  }
+  flex-wrap: wrap;
+  gap: 16px;
+  position: relative;
+  width: calc(25% - (32px / 4 * 3));
 
   &.wide {
     width: 100%;
@@ -138,39 +73,42 @@ a.card {
     }
   }
 
-  &.top {
+  &.border {
 
-    .image-wrap:after {
-      background: linear-gradient(180deg,#2e3333 3.92%,#0000 96.1%);
-    }
+    &:not(.text-float) {
+      gap: 0;
 
-    .text-wrap {
-      top: 0;
-      bottom: auto;
+      .image-wrap {
+        .dark & {
+          background: var(--block-color);
+        }
+      }
+
+      .text-wrap {
+        padding: 16px;
+
+        .dark & {
+          background: var(--block-color);
+        }
+      }
     }
   }
 
-  &.middle {
+  &.hover {
 
-    .image-wrap:after {
-      background: #000;
-      opacity: 0.6;
+    &.text-float .image-wrap:after {
+      opacity: 0;
+      transition: opacity .2s ease;
     }
-
-    .text-wrap {
-      top: 50%;
-      transform: translateY(-50%);
-      bottom: auto;
-    }
-
-  }
-
-  &.text-hover {
 
     &:hover {
 
-      .image-wrap:after {
-        opacity: 0.4;
+      &.text-float .image-wrap:after {
+        opacity: 0.2;
+
+        .dark & {
+          opacity: 0.4;
+        }
       }
 
       .text-wrap {
@@ -178,97 +116,136 @@ a.card {
       }
     }
 
-    .image-wrap:after {
-      opacity: 0;
-      transition: 0.3s ease-out;
-    }
-
     .text-wrap {
       opacity: 0;
-      transition: 0.3s ease-out;
+      transition: opacity .2s ease;
     }
   }
 
-  .image-wrap {
-    height: 100%;
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
+  &:hover {
+    z-index: 1;
 
-    &:after {
-      background: linear-gradient(360deg,#2e3333 3.92%,#0000 96.1%);
-      bottom: 0;
-      content: "";
-      left: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
+    .tooltip {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
-  .text-wrap {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    padding: 24px;
-    text-shadow: 0 2px 2px #00000026;
-    color: #FFF;
-    gap: 8px;
+  &.text-float {
 
-    @media (max-width: 740px) {
-      padding: 16px;
-    }
+    .image-wrap {
+      position: relative;
 
-    h3 {
-      color: inherit;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.2;
 
-      @media (max-width: 640px) {
-
-        .mobile-2 &,
-        .mobile-3 & {
-          font-size: 18px;
+        .dark & {
+          opacity: 0.4;
         }
       }
     }
 
-    .button {
-      text-shadow: none;
+    .text-wrap {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      color: #FFF;
+      text-shadow: 0 2px 2px #00000026;
+    }
+
+    h3 {
+      .h3();
     }
   }
 
+  &.text-hide .text-wrap {
+    display: none;
+  }
+
+  .text-wrap {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .text-wrap > * {
+    color: inherit;
+  }
+
+  h3 {
+    .h5();
+  }
+
   .tooltip {
+    background: var(--tooltip-color);
+    border-radius: 8px;
+    color: var(--tooltip-color-text);
     font-size: 16px;
     line-height: 20px;
-    position: absolute;
-    top: 100%;
-    background: var(--tooltip-color);
-    color: var(--tooltip-color-text);
-    padding: 6px 16px;
-    border-radius: 8px;
+    margin-top: -8px;
     max-width: 100%;
     opacity: 0;
+    padding: 6px 16px;
+    position: absolute;
+    top: 100%;
     z-index: 1;
-    margin-top: -8px;
-
-    @media (max-width: 640px) {
-      font-size: 12px;
-      line-height: 16px;
-      padding: 6px 8px;
-    }
+    transition: opacity .2s ease;
 
     &:before {
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 6px 6px 6px;
       border-color: transparent transparent var(--tooltip-color) transparent;
-      position: absolute;
+      border-style: solid;
+      border-width: 0 6px 6px;
+      content: "";
+      height: 0;
       left: 50%;
+      position: absolute;
       top: -6px;
-      transform: translateX(-50%);
+      transform: translate(-50%);
+      width: 0;
     }
+  }
+}
+
+.border {
+
+  &.rounded .card-inner:after {
+    border-radius: 8px;
+  }
+
+  .card-inner {
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid rgba(0,0,0,0.1);
+
+      .dark & {
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+    }
+  }
+}
+
+.card-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  overflow: hidden;
+
+  .rounded & {
+    border-radius: var(--border-radius);
   }
 }
 

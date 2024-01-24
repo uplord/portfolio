@@ -124,21 +124,21 @@
             {
               image: 'https://picsum.photos/1500/1000',
               title: 'Title',
-              class: 'small middle text-center',
+              class: 'small middle text-center text-float rounded',
               text_hover: false,
               visible: false
             },
             {
               image: 'https://picsum.photos/900/600',
               title: 'Title',
-              class: 'small middle text-center',
+              class: 'small middle text-center text-float rounded',
               text_hover: true,
               visible: false
             },
             {
               image: 'https://picsum.photos/1200/800',
               title: 'Title',
-              class: 'small middle text-center',
+              class: 'small middle text-center text-float rounded',
               text_hover: false,
               visible: false,
               hide_text: true,

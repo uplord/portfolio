@@ -20,43 +20,44 @@
         :class="[
           card.class,
           {
-            'text-hover': card.text_hover == true,
-            'hide-text': card.hide_text == true,
+            hover: card.text_hover == true,
+            'text-hide': card.hide_text == true,
             visible: card.visible == true
           }
         ]"
       >
-        <div v-if="card.image" class="image-wrap">
-          <NuxtImg
-            :src="card.image"
-            sizes="xs:136px sm:326px"
-            format="webp"
-            fit="outside"
-            :alt="card.title"
-            loading="lazy"
-            :width="card.image_width"
-            :height="card.image_height"
-          />
-        </div>
+        <div class="card-inner">
+          <div v-if="card.image" class="image-wrap">
+            <NuxtImg
+              :src="card.image"
+              sizes="xs:136px sm:326px"
+              format="webp"
+              fit="outside"
+              :alt="card.title"
+              loading="lazy"
+              :width="card.image_width"
+              :height="card.image_height"
+            />
+          </div>
 
-        <div v-if="card.svg" class="image-wrap svg-wrap">
-          <nuxt-icon :name="card.svg" filled />
-        </div>
-        <div class="text-wrap inner-container">
-          <h3>{{ card.title }}</h3>
-          <p v-if="card.subtitle">{{ card.subtitle }}</p>
-          <div v-if="card.buttons" class="button-group">
-            <div
-              v-for="(button, button_key) in card.buttons"
-              :key="button_key"
-              class="button"
-              :class="button.class"
-            >
-              {{ button.text }}
+          <div v-if="card.svg" class="image-wrap svg-wrap">
+            <nuxt-icon :name="card.svg" filled />
+          </div>
+          <div class="text-wrap inner-container">
+            <h3>{{ card.title }}</h3>
+            <p v-if="card.subtitle">{{ card.subtitle }}</p>
+            <div v-if="card.buttons" class="button-group">
+              <div
+                v-for="(button, button_key) in card.buttons"
+                :key="button_key"
+                class="button"
+                :class="button.class"
+              >
+                {{ button.text }}
+              </div>
             </div>
           </div>
         </div>
-
         <div v-if="card.tooltip" class="tooltip">{{ card.tooltip }}</div>
       </component>
     </div>
