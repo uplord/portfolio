@@ -24,6 +24,12 @@
                   text: 'Get in touch',
                   link: 'mailto:michael@uplord.co.uk',
                   class: 'primary large'
+                },
+                {
+                  text: 'Download CV',
+                  link: '/assets/cv.pdf',
+                  target: '_blank',
+                  class: 'link large'
                 }
               ]
             }

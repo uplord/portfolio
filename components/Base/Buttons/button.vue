@@ -13,6 +13,7 @@
     :href="button.link"
     class="button"
     :class="button.class"
+    :target="button.target"
   >
     {{ button.text }}
   </a>
