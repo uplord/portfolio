@@ -2,14 +2,42 @@
   <main>
     <section>
       <div class="inner-container">
-        <h1 class="alignwide">Test</h1>
-        <h2 class="alignwide">Colours</h2>
-        <h2 class="alignwide">Typography</h2>
+        <h1 class="heading">Styleguide</h1>
+        <h2 class="heading">Colours</h2>
 
-        <h2 class="alignwide">Base Components</h2>
+        <h2 class="heading">Typography</h2>
 
-        <div class="inner-container alignwide">
-          <h3>Buttons</h3>
+        <div class="inner-container">
+          <h3 class="heading">Headings</h3>
+          <h1>Heading 1</h1>
+          <h2>Heading 2</h2>
+          <h3>Heading 3</h3>
+          <h4>Heading 4</h4>
+          <h5>Heading 5</h5>
+          <h6>Heading 6</h6>
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">Content</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+            malesuada erat. Aenean porttitor, justo eget laoreet pharetra,
+            sapien arcu pulvinar lectus, vitae consequat arcu diam nec lorem.
+            Suspendisse laoreet sagittis felis, non laoreet neque. Nunc egestas
+            tellus ut euismod malesuada. Aliquam eget mollis ex. Mauris
+            vestibulum urna non tortor tempor, dictum congue mauris auctor.
+            Integer pretium libero purus, nec aliquam nunc rhoncus eu. Mauris in
+            urna velit. Vivamus non malesuada sapien. Morbi tortor sapien,
+            sagittis id aliquam vitae, bibendum at leo. Vestibulum facilisis
+            odio magna, et finibus nisi vulputate eget. Vivamus interdum massa
+            id sollicitudin euismod.
+          </p>
+        </div>
+
+        <h2 class="heading">Base Components</h2>
+
+        <div class="inner-container">
+          <h3 class="heading">Buttons</h3>
           <BaseButtons
             :buttons="[
               {
@@ -20,22 +48,396 @@
                 text: 'Submit',
                 type: 'submit',
                 class: 'primary'
+              }
+            ]"
+          />
+
+          <!--
+
+          <h3 class="heading">Button Groups</h3>
+
+          <BaseButtons
+            :buttons="[
+              {
+                text: 'Link',
+                link: '#',
+                class: 'primary'
               },
               {
-                text: 'Button'
+                text: 'Link',
+                link: '#',
+                class: 'primary'
+              },
+              {
+                text: 'Link',
+                link: '#',
+                class: 'primary'
+              }
+            ]"
+            ,
+            class="group"
+          />
+
+          -->
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">Inputs</h3>
+
+          <BaseInput
+            id="input-1"
+            v-model="form.input1"
+            label="Input"
+            type="text"
+          />
+
+          <BaseInput
+            id="input-2"
+            v-model="form.input2"
+            label="Input (Disabled)"
+            type="text"
+            disabled="true"
+          />
+
+          <BaseTextarea
+            id="textarea-1"
+            v-model="form.textarea2"
+            label="Textarea"
+          />
+        </div>
+        <div class="inner-container">
+          <h3 class="heading">Dropdown</h3>
+
+          <BaseSelect
+            id="select-1"
+            v-model="form.select1"
+            :options="[
+              {
+                value: '',
+                name: 'Select Option'
+              },
+              {
+                value: 'value-1',
+                name: 'Value 1'
+              },
+              {
+                value: 'value-2',
+                name: 'Value 2'
+              }
+            ]"
+            label="Select"
+          />
+
+          <BaseSelect
+            id="select-2"
+            v-model="form.select2"
+            :options="[
+              {
+                value: '',
+                name: 'Select Option'
+              },
+              {
+                value: 'value-1',
+                name: 'Value 1'
+              },
+              {
+                value: 'value-2',
+                name: 'Value 2'
+              }
+            ]"
+            label="Select (Disabled)"
+            disabled="true"
+          />
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">Toggles</h3>
+
+          <BaseCheckbox
+            id="switch-1"
+            v-model="form.switch1"
+            title="Switch"
+            label=""
+            switch-mode="true"
+          />
+
+          <BaseCheckbox
+            id="switch-2"
+            v-model="form.switch2"
+            title="Switch (Checked)"
+            label=""
+            switch-mode="true"
+          />
+
+          <BaseCheckbox
+            id="switch-3"
+            v-model="form.switch3"
+            title="Switch (Disabled)"
+            label=""
+            switch-mode="true"
+            disabled="true"
+          />
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">Checkboxes</h3>
+
+          <BaseCheckbox
+            id="checkbox-1"
+            v-model="form.checkbox1"
+            title="Checkbox"
+            label="Checkbox"
+          />
+
+          <BaseCheckbox
+            id="checkbox-2"
+            v-model="form.checkbox2"
+            title="Checkbox (Checked)"
+            label="Checkbox"
+          />
+
+          <BaseCheckbox
+            id="checkbox-3"
+            v-model="form.checkbox3"
+            title="Checkbox (Disabled)"
+            label="Checkbox"
+            disabled="true"
+          />
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">Tooltips</h3>
+
+          <div class="tooltips">
+            <div class="tooltip">Tooltip Top</div>
+            <div class="tooltip bottom">Tooltip Bottom</div>
+          </div>
+        </div>
+
+        <h3 class="heading">Progress Indicator</h3>
+        <h3 class="heading">Sliders</h3>
+
+        <div class="inner-container">
+          <h3 class="heading">Login</h3>
+        </div>
+
+        <div class="inner-container alignsmall">
+          <form
+            method="post"
+            action=""
+            autocomplete="off"
+            class="inner-container"
+          >
+            <div class="inner-container text-center">
+              <h1 class="h2">Log in to your account</h1>
+              <p>Welcome back! Please enter your details.</p>
+            </div>
+
+            <BaseInput
+              id="login-email"
+              label="Email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="off"
+            />
+
+            <BaseInput
+              id="login-password"
+              label="Password"
+              type="password"
+              placeholder="••••••••"
+              autocomplete="new-password"
+            />
+
+            <BaseCheckbox id="remember" label="Remember for 30 days" />
+
+            <BaseButtons
+              :buttons="[
+                {
+                  text: 'Sign in',
+                  type: 'submit',
+                  class: 'primary full'
+                }
+              ]"
+            />
+            <p class="text-center">
+              Don't have an account? <a href="" class="link">Sign up</a>
+            </p>
+          </form>
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">Sign up</h3>
+        </div>
+
+        <div class="inner-container alignsmall">
+          <form
+            method="post"
+            action=""
+            autocomplete="off"
+            class="inner-container"
+          >
+            <div class="inner-container text-center">
+              <h1 class="h2">Create an account</h1>
+              <p>Start your 30-day free trial.</p>
+            </div>
+
+            <BaseInput
+              id="signup-name"
+              label="Name"
+              type="text"
+              placeholder="Enter your name"
+              autocomplete="off"
+            />
+
+            <BaseInput
+              id="signup-email"
+              label="Email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="off"
+            />
+
+            <BaseInput
+              id="signup-password"
+              label="Password"
+              type="text"
+              placeholder="Create a password"
+              autocomplete="new-password"
+            />
+
+            <ul>
+              <li>Must be at least 8 characters</li>
+              <li>Must contain one special character</li>
+            </ul>
+
+            <BaseButtons
+              :buttons="[
+                {
+                  text: 'Get started',
+                  type: 'submit',
+                  class: 'primary full'
+                }
+              ]"
+            />
+            <p class="text-center">
+              Already have an account? <a href="" class="link">Log in</a>
+            </p>
+          </form>
+        </div>
+
+        <h3 class="heading">Verification</h3>
+        <h3 class="heading">Forgot Password</h3>
+        <h3 class="heading">404</h3>
+        <h3 class="heading">Video Player</h3>
+
+        <div class="inner-container">
+          <h3 class="heading alignfull">Header Navigation</h3>
+        </div>
+        <div class="inner-container alignfull">
+          <Header />
+        </div>
+
+        <h3 class="heading">Header Sections</h3>
+        <h3 class="heading">Featured</h3>
+        <h3 class="heading">Pricing</h3>
+        <h3 class="heading">CTA</h3>
+        <h3 class="heading">Metric</h3>
+        <h3 class="heading">Newsletter</h3>
+        <h3 class="heading">Testimonials</h3>
+        <h3 class="heading">Blog</h3>
+        <h3 class="heading">Contact</h3>
+        <h3 class="heading">Team</h3>
+        <h3 class="heading">Career</h3>
+        <h3 class="heading">FAQs</h3>
+
+        <div class="inner-container">
+          <h3 class="heading">Footer</h3>
+          <Footer />
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">Banner</h3>
+        </div>
+        <div class="inner-container alignmax">
+          <BlockBanner
+            :slides="[
+              {
+                image: {
+                  src: '/assets/images/main3.png',
+                  width: 500,
+                  height: 500,
+                  title: 'Banner Michael Allen Image',
+                  floating: true,
+                  sizes: 'sm:140px md:550px'
+                },
+                title: 'A Senior Front End Developer based in Dundee, Scotland',
+                subtitle: 'With 8 years in the industry creating websites',
+                buttons: [
+                  {
+                    text: 'Get in touch',
+                    link: '#contact-form',
+                    class: 'large'
+                  }
+                ],
+                class: ''
+              },
+              {
+                image: {
+                  src: '/assets/images/122-2000x800.jpg',
+                  src_mobile: 'https://placehold.co/640x1000/333/333'
+                },
+                title: 'A Senior Front End Developer based in Dundee, Scotland',
+                subtitle: 'With 7 years in the industry creating websites',
+                buttons: [
+                  {
+                    text: 'Get in touch',
+                    link: '#contact-form',
+                    class: 'large'
+                  }
+                ],
+                class: 'text-center light'
+              },
+              {
+                image: {
+                  src: '/assets/images/185-2000x800.jpg',
+                  src_mobile: 'https://placehold.co/640x1000/EEE/EEE'
+                },
+                title: 'A Senior Front End Developer based in Dundee, Scotland',
+                subtitle: 'With 7 years in the industry creating websites',
+                buttons: [
+                  {
+                    text: 'Get in touch',
+                    class: 'large'
+                  }
+                ],
+                class: 'text-center dark'
               }
             ]"
           />
         </div>
 
-        <h3 class="alignwide">Button Groups</h3>
-        <h3 class="alignwide">Inputs</h3>
-        <h3 class="alignwide">Dropdown</h3>
-        <h3 class="alignwide">Toggles</h3>
-        <h3 class="alignwide">Checkboxes</h3>
-        <h3 class="alignwide">Tooltips</h3>
-        <h3 class="alignwide">Progress Indicator</h3>
-        <h3 class="alignwide">Sliders</h3>
+        <h3 class="heading">Modal</h3>
+        <h3 class="heading">Pagination</h3>
+        <h3 class="heading">Horizontal Tabs</h3>
+        <h3 class="heading">Vertical Tabs</h3>
+        <h3 class="heading">Progress Steps</h3>
+        <h3 class="heading">Tables</h3>
+        <h3 class="heading">Breadcrumbs</h3>
+        <h3 class="heading">Notifications</h3>
+
+        <div class="inner-container">
+          <h3 class="heading">Alerts</h3>
+          <BlockAlert type="success" message="Your email address is saved" />
+          <BlockAlert type="error" message="Your email address is invalid" />
+          <BlockAlert type="warning" message="Your email address is invalid" />
+          <BlockAlert message="Your email address is valid" />
+        </div>
+
+        <h3 class="heading">File Uploader</h3>
+        <h3 class="heading">Content Divider</h3>
+        <h3 class="heading">Empty States</h3>
+        <h3 class="heading">Code Snippet</h3>
       </div>
     </section>
   </main>
@@ -105,10 +507,38 @@ export default {
         }
       ],
       htmlAttrs: {
-        lang: 'en'
+        lang: 'en '
+      },
+      bodyAttrs: {
+        class: 'styleguide sticky'
       }
     })
   },
-  data() {}
+  data() {
+    return {
+      form: {
+        input1: '',
+        input2: '',
+        textarea1: '',
+        select1: '',
+        select2: '',
+        select3: '',
+        switch1: false,
+        switch2: true,
+        switch3: false,
+        checkbox1: false,
+        checkbox2: true,
+        checkbox3: false
+      }
+    }
+  }
 }
 </script>
+
+<style lang="less">
+.styleguide .heading {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-top: 16px;
+}
+</style>

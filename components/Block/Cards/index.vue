@@ -57,8 +57,8 @@
               </div>
             </div>
           </div>
+          <div v-if="card.tooltip" class="tooltip">{{ card.tooltip }}</div>
         </div>
-        <div v-if="card.tooltip" class="tooltip">{{ card.tooltip }}</div>
       </component>
     </div>
   </div>

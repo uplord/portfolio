@@ -8,23 +8,27 @@
   }
 }
 
-.sticky header {
+.sticky #page > header {
 
   @media (min-width: 741px) {
     position: sticky;
     top: 0;
+    z-index: 1000;
+  }
+}
+
+#page > header {
+
+  .scrolled & {
+    background: var(--header-background);
+    border-bottom-color: var(--border-color);
   }
 }
 
 header {
-  background: var(--header-background);
   color: var(--header-color);
   transition: color 0.6s ease-out, border 0.3s ease;
   border-bottom: 1px solid transparent;
-
-  .scrolled & {
-    border-bottom-color: var(--border-color);
-  }
 
   &.light-header {
     color: #FFF;

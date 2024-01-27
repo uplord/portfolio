@@ -85,6 +85,14 @@
   }
 }
 
+.homepage .banner {
+  margin-top: -32px;
+
+  @media (min-width: 741px) {
+    margin-top: -48px;
+  }
+}
+
 .banner {
   position: relative;
 
@@ -110,14 +118,6 @@
       content: '';
       padding-bottom: calc(100% / 640 * 1000);
       display: block;
-    }
-  }
-
-  &:first-child {
-    margin-top: -32px;
-
-    @media (min-width: 741px) {
-      margin-top: -48px;
     }
   }
 

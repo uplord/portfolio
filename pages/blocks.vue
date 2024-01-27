@@ -94,61 +94,8 @@
           ]"
         />
 
-        <BlockCards
-          :visible="sections[2].visible"
-          classes="alignwide"
-          title="Cards"
-          :cards="[
-            {
-              image: 'https://picsum.photos/1500/1000',
-              title: 'Title',
-              subtitle:
-                'Lorem ipsum dolor sit amet consectetur adipiscing elit',
-              class: ''
-            },
-            {
-              image: 'https://picsum.photos/1500/1000',
-              title: 'Title',
-              subtitle:
-                'Lorem ipsum dolor sit amet consectetur adipiscing elit',
-              class: 'text-center top'
-            }
-          ]"
-        />
-
-        <BlockCards
-          :visible="sections[3].visible"
-          classes="alignwide text-center"
-          title="Hover Cards"
-          :cards="[
-            {
-              image: 'https://picsum.photos/1500/1000',
-              title: 'Title',
-              class: 'small middle text-center text-float rounded',
-              text_hover: false,
-              visible: false
-            },
-            {
-              image: 'https://picsum.photos/900/600',
-              title: 'Title',
-              class: 'small middle text-center text-float rounded',
-              text_hover: true,
-              visible: false
-            },
-            {
-              image: 'https://picsum.photos/1200/800',
-              title: 'Title',
-              class: 'small middle text-center text-float rounded',
-              text_hover: false,
-              visible: false,
-              hide_text: true,
-              tooltip: 'Tooltip'
-            }
-          ]"
-        />
-
         <BlockIcons
-          :visible="sections[4].visible"
+          :visible="sections[2].visible"
           title="Timeline Icons"
           :icons="[
             {
@@ -179,7 +126,7 @@
 
         <BlockPromo
           id="promo"
-          :visible="sections[5].visible"
+          :visible="sections[3].visible"
           title="Promo"
           :promo="{
             title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
