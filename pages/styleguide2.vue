@@ -327,8 +327,122 @@
         </div>
 
         <h3 class="heading">Verification</h3>
-        <h3 class="heading">Forgot Password</h3>
-        <h3 class="heading">404</h3>
+        <div class="inner-container">
+          <h3 class="heading">Forgot Password</h3>
+        </div>
+
+        <div class="inner-container alignsmall">
+          <form
+            method="post"
+            action=""
+            autocomplete="off"
+            class="inner-container"
+          >
+            <div class="inner-container text-center">
+              <h1 class="h2">Forgot password?</h1>
+              <p>No worries, we'll send you reset instructions.</p>
+            </div>
+
+            <BaseInput
+              id="forgot-email"
+              label="Email"
+              type="email"
+              placeholder="Enter your email"
+              autocomplete="off"
+            />
+
+            <BaseButtons
+              :buttons="[
+                {
+                  text: 'Reset password',
+                  type: 'submit',
+                  class: 'primary full'
+                }
+              ]"
+            />
+            <p class="text-center">
+              <a href="" class="link">Back to log in</a>
+            </p>
+          </form>
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">Reset Password</h3>
+        </div>
+
+        <div class="inner-container alignsmall">
+          <form
+            method="post"
+            action=""
+            autocomplete="off"
+            class="inner-container"
+          >
+            <div class="inner-container text-center">
+              <h1 class="h2">Set new password?</h1>
+              <p>
+                Your new password must be different to previously used
+                passwords.
+              </p>
+            </div>
+
+            <BaseInput
+              id="reset-password"
+              label="Password"
+              type="password"
+              placeholder="••••••••"
+              autocomplete="off"
+            />
+
+            <BaseInput
+              id="reset-confirm"
+              label="Confirm password"
+              type="password"
+              placeholder="••••••••"
+              autocomplete="off"
+            />
+
+            <ul>
+              <li>Must be at least 8 characters</li>
+              <li>Must contain one special character</li>
+            </ul>
+
+            <BaseButtons
+              :buttons="[
+                {
+                  text: 'Reset password',
+                  type: 'submit',
+                  class: 'primary full'
+                }
+              ]"
+            />
+            <p class="text-center">
+              <a href="" class="link">Back to log in</a>
+            </p>
+          </form>
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">404</h3>
+        </div>
+        <div class="inner-container alignsmall text-center">
+          <h1 class="h2">Page not found</h1>
+          <p>
+            The page you are looking for doesn't exist.<br />Here are some
+            helpful links:
+          </p>
+          <BaseButtons
+            :buttons="[
+              {
+                text: 'Go back',
+                class: ''
+              },
+              {
+                text: 'Take me home',
+                class: 'primary'
+              }
+            ]"
+          />
+        </div>
         <h3 class="heading">Video Player</h3>
 
         <div class="inner-container">
@@ -336,24 +450,6 @@
         </div>
         <div class="inner-container alignfull">
           <Header />
-        </div>
-
-        <h3 class="heading">Header Sections</h3>
-        <h3 class="heading">Featured</h3>
-        <h3 class="heading">Pricing</h3>
-        <h3 class="heading">CTA</h3>
-        <h3 class="heading">Metric</h3>
-        <h3 class="heading">Newsletter</h3>
-        <h3 class="heading">Testimonials</h3>
-        <h3 class="heading">Blog</h3>
-        <h3 class="heading">Contact</h3>
-        <h3 class="heading">Team</h3>
-        <h3 class="heading">Career</h3>
-        <h3 class="heading">FAQs</h3>
-
-        <div class="inner-container">
-          <h3 class="heading">Footer</h3>
-          <Footer />
         </div>
 
         <div class="inner-container">
@@ -415,6 +511,63 @@
               }
             ]"
           />
+        </div>
+
+        <h3 class="heading">Sections</h3>
+
+        <BlockSection
+          :sections="[
+            {
+              subtitle: 'About Michael Allen',
+              title: 'Front End Development',
+              content:
+                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
+              class: 'text-center'
+            },
+            {
+              image: {
+                src: '/assets/images/about.png',
+                width: 660,
+                height: 814,
+                title: 'About Michael Allen Image',
+                sizes: 'sm:220px md:660px'
+              },
+              subtitle: 'About Michael Allen',
+              title: 'Front End Development',
+              content:
+                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>'
+            },
+            {
+              image: {
+                src: '/assets/images/about.png',
+                width: 660,
+                height: 814,
+                title: 'About Michael Allen Image',
+                sizes: 'sm:220px md:660px'
+              },
+              subtitle: 'About Michael Allen',
+              title: 'Front End Development',
+              content:
+                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
+              class: 'reverse'
+            }
+          ]"
+        />
+
+        <h3 class="heading">Pricing</h3>
+        <h3 class="heading">CTA</h3>
+        <h3 class="heading">Metric</h3>
+        <h3 class="heading">Newsletter</h3>
+        <h3 class="heading">Testimonials</h3>
+        <h3 class="heading">Blog</h3>
+        <h3 class="heading">Contact</h3>
+        <h3 class="heading">Team</h3>
+        <h3 class="heading">Career</h3>
+        <h3 class="heading">FAQs</h3>
+
+        <div class="inner-container">
+          <h3 class="heading">Footer</h3>
+          <Footer />
         </div>
 
         <h3 class="heading">Modal</h3>
@@ -539,6 +692,5 @@ export default {
 .styleguide .heading {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 16px;
-  margin-top: 16px;
 }
 </style>

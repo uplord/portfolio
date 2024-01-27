@@ -25,7 +25,10 @@
 
     &:not(.full) .image-wrap {
       @media (min-width: 741px) {
-        opacity: 0;
+
+        .animate & {
+          opacity: 0;
+        }
       }
     }
 

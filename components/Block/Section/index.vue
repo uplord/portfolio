@@ -1,21 +1,26 @@
 <template>
   <div
     :id="id"
-    class="block alignwide js_section"
-    :class="{ visible: visible == true }"
+    class="block alignwide"
+    :class="{
+      'animate js_section': animate == 'true',
+      visible: visible == true
+    }"
   >
     <div class="sections">
       <div
         v-for="(section, key) in all_sections"
         :key="key"
         ref="section"
-        class="section js_article"
+        class="section"
         :class="[
           section.class,
           {
             visible: section.visible == true,
             loaded: section.loaded == true,
-            'section-icons': section.icons
+            js_article: animate == 'true',
+            'section-icons': section.icons,
+            full: !section.image && !section.icons && !section.contact_form
           }
         ]"
       >
@@ -61,7 +66,7 @@
 
 <script>
 export default {
-  props: ['visible', 'sections', 'id'],
+  props: ['animate', 'visible', 'sections', 'id'],
   data() {
     return {
       all_sections: this.sections

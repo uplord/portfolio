@@ -38,6 +38,7 @@
 
         <BlockSection
           id="about-me"
+          animate="true"
           :visible="sections[1].visible"
           :sections="[
             {
@@ -156,6 +157,7 @@
 
         <BlockSection
           id="timeline"
+          animate="true"
           :visible="sections[3].visible"
           :sections="[
             {
