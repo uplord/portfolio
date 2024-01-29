@@ -67,10 +67,10 @@
 
         <div class="inner-container">
           <h2 class="h4">Alerts</h2>
-          <BlockAlert type="success" message="Your email address is saved" />
-          <BlockAlert type="error" message="Your email address is invalid" />
-          <BlockAlert type="warning" message="Your email address is invalid" />
-          <BlockAlert message="Your email address is valid" />
+          <Alert type="success" message="Your email address is saved" />
+          <Alert type="error" message="Your email address is invalid" />
+          <Alert type="warning" message="Your email address is invalid" />
+          <Alert message="Your email address is valid" />
         </div>
 
         <div class="inner-container">

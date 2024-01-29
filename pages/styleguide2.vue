@@ -214,8 +214,19 @@
           </div>
         </div>
 
-        <h3 class="heading">Progress Indicator</h3>
-        <h3 class="heading">Sliders</h3>
+        <div class="inner-container">
+          <h3 class="heading">Progress Indicator</h3>
+          <progress></progress>
+        </div>
+
+        <div class="inner-container">
+          <h3 class="heading">Sliders</h3>
+          <div class="field">
+            <div class="input-wrap">
+              <input type="range" />
+            </div>
+          </div>
+        </div>
 
         <div class="inner-container">
           <h3 class="heading">Login</h3>
@@ -326,7 +337,71 @@
           </form>
         </div>
 
-        <h3 class="heading">Verification</h3>
+        <div class="inner-container">
+          <h3 class="heading">Verification</h3>
+        </div>
+
+        <div class="inner-container alignsmall">
+          <form
+            method="post"
+            action=""
+            autocomplete="off"
+            class="inner-container"
+          >
+            <div class="inner-container text-center">
+              <h1 class="h2">Check your email</h1>
+              <p>We sent a verfication link to michael@uplord.co.uk</p>
+            </div>
+
+            <div class="field">
+              <div class="input-wrap">
+                <input
+                  id="verify-1"
+                  type="text"
+                  class="input large"
+                  pattern="\d*"
+                  maxlength="1"
+                />
+                <input
+                  id="verify-2"
+                  type="text"
+                  class="input large"
+                  pattern="\d*"
+                  maxlength="1"
+                />
+                <input
+                  id="verify-3"
+                  type="text"
+                  class="input large"
+                  pattern="\d*"
+                  maxlength="1"
+                />
+                <input
+                  id="verify-4"
+                  type="text"
+                  class="input large"
+                  pattern="\d*"
+                  maxlength="1"
+                  autofill="off"
+                />
+              </div>
+            </div>
+
+            <BaseButtons
+              :buttons="[
+                {
+                  text: 'Verifiy email',
+                  type: 'submit',
+                  class: 'primary full'
+                }
+              ]"
+            />
+            <p class="text-center">
+              Didn't receive email? <a href="" class="link">Click to resend</a>
+            </p>
+          </form>
+        </div>
+
         <div class="inner-container">
           <h3 class="heading">Forgot Password</h3>
         </div>
@@ -443,7 +518,10 @@
             ]"
           />
         </div>
+
+        <!--
         <h3 class="heading">Video Player</h3>
+        -->
 
         <div class="inner-container">
           <h3 class="heading alignfull">Header Navigation</h3>
@@ -522,20 +600,19 @@
               title: 'Front End Development',
               content:
                 '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
+              buttons: [
+                {
+                  text: 'Learn more',
+                  link: '',
+                  class: 'large'
+                },
+                {
+                  text: 'Get started',
+                  link: '',
+                  class: 'primary large'
+                }
+              ],
               class: 'text-center'
-            },
-            {
-              image: {
-                src: '/assets/images/about.png',
-                width: 660,
-                height: 814,
-                title: 'About Michael Allen Image',
-                sizes: 'sm:220px md:660px'
-              },
-              subtitle: 'About Michael Allen',
-              title: 'Front End Development',
-              content:
-                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>'
             },
             {
               image: {
@@ -550,47 +627,105 @@
               content:
                 '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
               class: 'reverse'
+            },
+            {
+              image: {
+                src: '/assets/images/about.png',
+                width: 660,
+                height: 814,
+                title: 'About Michael Allen Image',
+                sizes: 'sm:220px md:660px'
+              },
+              subtitle: 'About Michael Allen',
+              title: 'Front End Development',
+              content:
+                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>'
             }
           ]"
         />
 
+        <!--
         <h3 class="heading">Pricing</h3>
-        <h3 class="heading">CTA</h3>
         <h3 class="heading">Metric</h3>
         <h3 class="heading">Newsletter</h3>
         <h3 class="heading">Testimonials</h3>
         <h3 class="heading">Blog</h3>
-        <h3 class="heading">Contact</h3>
+        -->
+
+        <div class="inner-container">
+          <h3 class="heading">Contact</h3>
+          <FormContact />
+        </div>
+
+        <!--
         <h3 class="heading">Team</h3>
         <h3 class="heading">Career</h3>
         <h3 class="heading">FAQs</h3>
+        -->
 
         <div class="inner-container">
           <h3 class="heading">Footer</h3>
           <Footer />
         </div>
 
+        <!--
         <h3 class="heading">Modal</h3>
-        <h3 class="heading">Pagination</h3>
+        -->
+
+        <div class="inner-container">
+          <h3 class="heading">Pagination</h3>
+          <Pagination />
+        </div>
+
+        <!--
         <h3 class="heading">Horizontal Tabs</h3>
         <h3 class="heading">Vertical Tabs</h3>
         <h3 class="heading">Progress Steps</h3>
         <h3 class="heading">Tables</h3>
-        <h3 class="heading">Breadcrumbs</h3>
+        -->
+
+        <div class="inner-container">
+          <h3 class="heading">Breadcrumbs</h3>
+          <Breadcrumbs />
+        </div>
+
+        <!--
         <h3 class="heading">Notifications</h3>
+        -->
 
         <div class="inner-container">
           <h3 class="heading">Alerts</h3>
-          <BlockAlert type="success" message="Your email address is saved" />
-          <BlockAlert type="error" message="Your email address is invalid" />
-          <BlockAlert type="warning" message="Your email address is invalid" />
-          <BlockAlert message="Your email address is valid" />
+          <Alert type="success" message="Your email address is saved" />
+          <Alert type="error" message="Your email address is invalid" />
+          <Alert type="warning" message="Your email address is invalid" />
+          <Alert message="Your email address is valid" />
         </div>
 
-        <h3 class="heading">File Uploader</h3>
-        <h3 class="heading">Content Divider</h3>
+        <div class="inner-container">
+          <h3 class="heading">File Uploader</h3>
+          <BaseFile
+            id="file"
+            v-model="form.file"
+            accept="image/gif, image/jpeg, image/png"
+          />
+          <BaseFile
+            id="file2"
+            v-model="form.file2"
+            classes="primary"
+            accept="image/gif, image/jpeg, image/png"
+          />
+
+          {{ form.file }} - {{ form.file2 }}
+        </div>
+        <div class="inner-container">
+          <h3 class="heading">Content Divider</h3>
+          <hr />
+        </div>
+
+        <!--
         <h3 class="heading">Empty States</h3>
         <h3 class="heading">Code Snippet</h3>
+        -->
       </div>
     </section>
   </main>
@@ -603,7 +738,7 @@ const meta = {
     'Experienced Front End Developer with 8 years of expertise, showcasing excellent collaboration, organization, and teamwork skills. Passionate about HTML, CSS, and JavaScript, I thrive on creating exceptional websites. My strong analytical, debugging, and problem-solving abilities have successfully served both small and large clients. Always open to exploring new technologies for innovative web solutions.',
   type: 'website',
   image: '/assets/images/og_image.png',
-  url: 'https://themichael.co.uk/blocks'
+  url: 'https://themichael.co.uk/styleguide2'
 }
 
 export default {
@@ -681,7 +816,9 @@ export default {
         switch3: false,
         checkbox1: false,
         checkbox2: true,
-        checkbox3: false
+        checkbox3: false,
+        file: undefined,
+        file2: undefined
       }
     }
   }

@@ -1,0 +1,64 @@
+.file {
+  position: relative;
+
+  .nuxt-icon svg {
+    width: auto;
+    height: 24px;
+    margin: auto;
+  }
+
+  input[type='file'] {
+    display: none;
+  }
+}
+
+.file-wrap {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--button-color);
+  border: 1px solid transparent;
+  border-color: var(--border-color);
+  color: var(--button-color-text);
+  padding: 16px;
+  border-radius: var(--border-radius);
+
+  &.primary {
+    background: var(--primary-color);
+    border-color: transparent;
+    color: var(--primary-color-text);
+
+    &:hover {
+      background: var(--primary-color-hover);
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: var(--button-color-hover);
+  }
+
+  .file-label {
+    font-weight: 600;
+  }
+
+  .file-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+
+    img {
+      margin: 0 auto;
+      max-width: 140px;
+      max-height: 140px;
+    }
+  }
+
+  .file-name {
+    font-size: 12px;
+    opacity: 0.6;
+  }
+}
