@@ -1,63 +1,67 @@
 <template>
   <div
     :id="id"
-    class="block alignwide"
+    class="block block-section alignmax"
     :class="{
       'animate js_section': animate == 'true',
       visible: visible == true
     }"
   >
-    <div class="sections">
-      <div
-        v-for="(section, key) in all_sections"
-        :key="key"
-        ref="section"
-        class="section"
-        :class="[
-          section.class,
-          {
-            visible: section.visible == true,
-            loaded: section.loaded == true,
-            js_article: animate == 'true',
-            'section-icons': section.icons,
-            full: !section.image && !section.icons && !section.contact_form
-          }
-        ]"
-      >
-        <div v-if="section.image" class="image-wrap">
-          <NuxtImg
-            :src="section.image.src"
-            :sizes="section.image.sizes"
-            format="webp"
-            fit="outside"
-            :alt="section.image.title"
-            :width="section.image.width"
-            :height="section.image.height"
-          />
-        </div>
-
-        <div class="text-wrap inner-container">
-          <h2 class="h4 primary">{{ section.subtitle }}</h2>
-          <h3 class="h2">{{ section.title }}</h3>
+    <div class="inner-container">
+      <div class="alignwide">
+        <div class="sections">
           <div
-            v-if="section.content"
-            class="inner-container"
-            v-html="section.content"
-          ></div>
-          <BaseButtons :buttons="section.buttons" />
-        </div>
+            v-for="(section, key) in all_sections"
+            :key="key"
+            ref="section"
+            class="section"
+            :class="[
+              section.class,
+              {
+                visible: section.visible == true,
+                loaded: section.loaded == true,
+                js_article: animate == 'true',
+                'section-icons': section.icons,
+                full: !section.image && !section.icons && !section.contact_form
+              }
+            ]"
+          >
+            <div v-if="section.image" class="image-wrap">
+              <NuxtImg
+                :src="section.image.src"
+                :sizes="section.image.sizes"
+                format="webp"
+                fit="outside"
+                :alt="section.image.title"
+                :width="section.image.width"
+                :height="section.image.height"
+              />
+            </div>
 
-        <div v-if="section.icons" class="image-wrap">
-          <BlockIcons
-            :visible="section.icons_visible"
-            :icons="section.icons"
-            stacked="true"
-            hide-animation="true"
-          />
-        </div>
+            <div class="text-wrap inner-container">
+              <h2 class="h4 primary">{{ section.subtitle }}</h2>
+              <h3 class="h2">{{ section.title }}</h3>
+              <div
+                v-if="section.content"
+                class="inner-container"
+                v-html="section.content"
+              ></div>
+              <BaseButtons :buttons="section.buttons" />
+            </div>
 
-        <div v-if="section.contact_form" class="image-wrap">
-          <FormContact />
+            <div v-if="section.icons" class="image-wrap">
+              <BlockIcons
+                :visible="section.icons_visible"
+                :icons="section.icons"
+                stacked="true"
+                hide-animation="true"
+              />
+            </div>
+
+            <div v-if="section.contact_form" class="image-wrap">
+              <FormContact />
+            </div>
+          </div>
         </div>
       </div>
     </div>
