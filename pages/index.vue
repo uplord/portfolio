@@ -9,7 +9,7 @@
           :slides="[
             {
               image: {
-                src: '/assets/images/main3.png',
+                src: '/assets/images/me.jpeg',
                 width: 500,
                 height: 500,
                 title: 'Banner Michael Allen Image',
