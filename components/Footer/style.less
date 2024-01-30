@@ -25,6 +25,10 @@
       text-decoration: underline;
     }
   }
+
+  .copyright {
+    font-size: 14px;
+  }
 }
 
 .social-icons {
@@ -32,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 24px;
 
   @media (max-width: 640px) {
     gap: 32px;
@@ -42,6 +46,19 @@
     list-style: none;
   }
 
+
+  .linkedin svg {
+    color: #0077B5;
+  }
+
+  .instagram svg {
+    color: #d62976;
+  }
+
+  .email svg {
+    color: var(--primary-color);
+  }
+
   .nuxt-icon svg {
     width: auto;
     height: 24px;
@@ -49,9 +66,5 @@
     @media (max-width: 640px) {
       height: 32px;
     }
-  }
-
-  a:hover svg {
-    color: var(--primary-color);
   }
 }

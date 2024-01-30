@@ -714,8 +714,6 @@
             classes="primary"
             accept="image/gif, image/jpeg, image/png"
           />
-
-          {{ form.file }} - {{ form.file2 }}
         </div>
         <div class="inner-container">
           <h3 class="heading">Content Divider</h3>

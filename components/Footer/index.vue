@@ -12,7 +12,7 @@
     </ul>
 
     <ul class="social-icons">
-      <li>
+      <li class="instagram">
         <NuxtLink
           to="https://www.instagram.com/michael.adam.allen/"
           target="_blank"
@@ -21,7 +21,7 @@
           <nuxt-icon name="instagram" filled />
         </NuxtLink>
       </li>
-      <li>
+      <li class="linkedin">
         <NuxtLink
           to="https://www.linkedin.com/in/themichael/"
           target="_blank"
@@ -30,12 +30,14 @@
           <nuxt-icon name="linkedin-in" filled />
         </NuxtLink>
       </li>
-      <li>
+      <li class="email">
         <NuxtLink to="mailto:michael@uplord.co.uk" aria-label="Email">
           <nuxt-icon name="envelope-solid" filled />
         </NuxtLink>
       </li>
     </ul>
+
+    <p class="copyright">&copy; {{ getYear() }} Michael Allen</p>
   </footer>
 </template>
 
@@ -78,7 +80,11 @@ export default {
       observer.observe(el)
     })
   },
-  methods: {}
+  methods: {
+    getYear() {
+      return new Date().getFullYear()
+    }
+  }
 }
 </script>
 
