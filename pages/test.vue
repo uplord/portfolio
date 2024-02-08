@@ -6,9 +6,9 @@
 export default {
   setup() {
     useHead({
-      title: 'Title',
+      title: "Title",
       htmlAttrs: {
-        lang: 'en'
+        lang: "en"
       }
     })
   },

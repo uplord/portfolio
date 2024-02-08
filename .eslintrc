@@ -11,11 +11,12 @@
     "plugin:nuxt/recommended"
   ],
   "rules": {
-    "quotes": ["error", "single"],
+    "quotes": ["error", "double"],
     "no-undef": "off",
     "vue/multi-word-component-names": "off",
     "vue/component-name-in-template-casing": ["error", "PascalCase"],
     "vue/require-prop-types": "off",
-    "vue/no-v-html": "off"
+    "vue/no-v-html": "off",
+    "prettier/prettier": ["error", { "singleQuote": false }]
   }
 }

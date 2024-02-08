@@ -66,7 +66,7 @@
 
 <script>
 export default {
-  props: ['visible', 'classes', 'id', 'title', 'cards'],
+  props: ["visible", "classes", "id", "title", "cards"],
   data() {
     return {
       allCards: this.cards
@@ -87,7 +87,7 @@ export default {
           },
           {
             threshold: 0,
-            rootMargin: '0px 0px 50px 0px'
+            rootMargin: "0px 0px 50px 0px"
           }
         )
 
@@ -103,5 +103,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

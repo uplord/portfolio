@@ -41,9 +41,9 @@ export default {
   data() {
     return {
       form: {
-        full_name: '',
-        email: '',
-        message: ''
+        full_name: "",
+        email: "",
+        message: ""
       }
     }
   },
@@ -53,5 +53,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

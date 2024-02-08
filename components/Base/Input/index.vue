@@ -20,30 +20,30 @@ export default {
   props: {
     label: {
       type: String,
-      default: ''
+      default: ""
     },
     placeholder: {
       type: String,
-      default: ''
+      default: ""
     },
     id: {
       type: String,
-      default: ''
+      default: ""
     },
     disabled: {
       type: String,
-      default: ''
+      default: ""
     },
     modelValue: {
       type: [String, Number],
-      default: ''
+      default: ""
     }
   },
-  emits: ['update:modelValue']
+  emits: ["update:modelValue"]
 }
 </script>
 
 <style lang="less" scoped>
-@import '../style';
-@import 'style';
+@import "../style";
+@import "style";
 </style>

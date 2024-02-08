@@ -33,5 +33,5 @@
 </template>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

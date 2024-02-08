@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  props: ['visible', 'title', 'image'],
+  props: ["visible", "title", "image"],
   data() {
     return {
       all_image: []
@@ -20,5 +20,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

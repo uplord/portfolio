@@ -51,11 +51,11 @@ export default {
       default: false
     }
   },
-  emits: ['update:modelValue']
+  emits: ["update:modelValue"]
 }
 </script>
 
 <style lang="less" scoped>
-@import '../style';
-@import 'style';
+@import "../style";
+@import "style";
 </style>

@@ -23,15 +23,15 @@ export default {
   props: {
     title: {
       type: String,
-      default: ''
+      default: ""
     },
     label: {
       type: String,
-      default: ''
+      default: ""
     },
     id: {
       type: String,
-      default: ''
+      default: ""
     },
     disabled: {
       type: Boolean,
@@ -39,18 +39,18 @@ export default {
     },
     modelValue: {
       type: [String, Number],
-      default: ''
+      default: ""
     },
     value: {
       type: [String, Number],
       required: true
     }
   },
-  emits: ['update:modelValue']
+  emits: ["update:modelValue"]
 }
 </script>
 
 <style lang="less" scoped>
-@import '../style';
-@import 'style';
+@import "../style";
+@import "style";
 </style>

@@ -70,11 +70,11 @@ export default {
   props: {
     type: {
       type: String,
-      default: 'info'
+      default: "info"
     },
     message: {
       type: String,
-      default: 'Alert Message'
+      default: "Alert Message"
     },
     allowHide: {
       type: Boolean,
@@ -97,5 +97,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

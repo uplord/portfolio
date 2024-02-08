@@ -89,7 +89,7 @@
 
 <script>
 export default {
-  props: ['animate', 'visible', 'slides', 'id'],
+  props: ["animate", "visible", "slides", "id"],
   data() {
     return {
       set_animate: false,
@@ -116,7 +116,7 @@ export default {
     }
   },
   mounted() {
-    if (this.animate != 'true' && this.visible != true) {
+    if (this.animate != "true" && this.visible != true) {
       this.set_visible = true
 
       this.loadSlides()
@@ -125,8 +125,8 @@ export default {
   methods: {
     loadSlides() {
       const vm = this,
-        header = document.getElementsByClassName('header')[0],
-        homepage = document.body.classList.contains('homepage'),
+        header = document.getElementsByClassName("header")[0],
+        homepage = document.body.classList.contains("homepage"),
         first_slide = vm.all_slides[0]
 
       first_slide.active = true
@@ -134,27 +134,27 @@ export default {
 
       if (
         first_slide.class &&
-        (first_slide.class.includes('dark') ||
-          first_slide.class.includes('light'))
+        (first_slide.class.includes("dark") ||
+          first_slide.class.includes("light"))
       ) {
-        header.classList.remove('banner-color')
+        header.classList.remove("banner-color")
 
-        if (first_slide.class.includes('dark')) {
-          vm.slides_text = 'is-dark'
+        if (first_slide.class.includes("dark")) {
+          vm.slides_text = "is-dark"
           if (homepage && header) {
-            header.classList.add('dark-header')
+            header.classList.add("dark-header")
           }
         } else {
-          vm.slides_text = 'is-light'
+          vm.slides_text = "is-light"
           if (homepage && header) {
-            header.classList.add('light-header')
+            header.classList.add("light-header")
           }
         }
       } else {
         if (header) {
-          header.classList.add('banner-color')
+          header.classList.add("banner-color")
         }
-        vm.slides_text = 'is-auto'
+        vm.slides_text = "is-auto"
       }
       if (vm.set_animate == true) {
         setTimeout(function () {
@@ -183,8 +183,8 @@ export default {
     },
     changeSlide(direction) {
       let vm = this,
-        header = document.getElementsByClassName('header')[0],
-        homepage = document.body.classList.contains('homepage'),
+        header = document.getElementsByClassName("header")[0],
+        homepage = document.body.classList.contains("homepage"),
         slide = vm.current_slide,
         old = vm.current_slide,
         new_slide = vm.all_slides[slide],
@@ -193,12 +193,12 @@ export default {
       if (vm.sliding == false) {
         vm.set_animate = true
 
-        if (direction == 'prev') {
+        if (direction == "prev") {
           slide--
           if (slide < 0) {
             slide = vm.all_slides.length - 1
           }
-        } else if (direction == 'next') {
+        } else if (direction == "next") {
           slide++
           if (slide >= vm.all_slides.length) {
             slide = 0
@@ -223,32 +223,32 @@ export default {
 
             if (
               new_slide.class &&
-              (new_slide.class.includes('dark') ||
-                new_slide.class.includes('light'))
+              (new_slide.class.includes("dark") ||
+                new_slide.class.includes("light"))
             ) {
               if (header) {
-                header.classList.remove('banner-color')
+                header.classList.remove("banner-color")
               }
 
-              if (new_slide.class.includes('dark')) {
-                vm.slides_text = 'is-dark'
+              if (new_slide.class.includes("dark")) {
+                vm.slides_text = "is-dark"
                 if (homepage && header) {
-                  header.classList.add('dark-header').remove('light-header')
+                  header.classList.add("dark-header").remove("light-header")
                 }
               } else {
-                vm.slides_text = 'is-light'
+                vm.slides_text = "is-light"
                 if (homepage && header) {
-                  header.classList.remove('dark-header').add('light-header')
+                  header.classList.remove("dark-header").add("light-header")
                 }
               }
             } else {
               if (header.length) {
                 header.classList
-                  .add('banner-color')
-                  .remove('dark-header')
-                  .remove('light-header')
+                  .add("banner-color")
+                  .remove("dark-header")
+                  .remove("light-header")
               }
-              vm.slides_text = 'is-auto'
+              vm.slides_text = "is-auto"
             }
           }, 600)
 
@@ -271,5 +271,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

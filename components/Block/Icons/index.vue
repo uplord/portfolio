@@ -73,13 +73,13 @@
 <script>
 export default {
   props: [
-    'visible',
-    'classes',
-    'title',
-    'icons',
-    'stacked',
-    'variable',
-    'hideAnimation'
+    "visible",
+    "classes",
+    "title",
+    "icons",
+    "stacked",
+    "variable",
+    "hideAnimation"
   ],
   data() {
     return {
@@ -101,7 +101,7 @@ export default {
           },
           {
             threshold: 0,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: "0px 0px -100px 0px"
           }
         )
 
@@ -117,5 +117,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

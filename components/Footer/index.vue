@@ -73,11 +73,11 @@ export default {
       },
       {
         threshold: 0,
-        rootMargin: '0px 0px 50px 0px'
+        rootMargin: "0px 0px 50px 0px"
       }
     )
 
-    document.querySelectorAll('.js_footer').forEach(function (el, index) {
+    document.querySelectorAll(".js_footer").forEach(function (el, index) {
       el.index = index
       observer.observe(el)
     })
@@ -91,5 +91,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

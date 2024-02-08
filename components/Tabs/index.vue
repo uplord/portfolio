@@ -25,7 +25,7 @@
 </template>
 <script>
 export default {
-  props: ['tabs', 'vertical'],
+  props: ["tabs", "vertical"],
   setup() {
     const active = ref(0)
 
@@ -44,5 +44,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

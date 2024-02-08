@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  props: ['visible', 'title', 'promo', 'id'],
+  props: ["visible", "title", "promo", "id"],
   data() {
     return {
       all_promo: this.promo
@@ -35,5 +35,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

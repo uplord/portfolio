@@ -70,7 +70,7 @@
 
 <script>
 export default {
-  props: ['animate', 'visible', 'sections', 'id'],
+  props: ["animate", "visible", "sections", "id"],
   data() {
     return {
       all_sections: this.sections
@@ -99,7 +99,7 @@ export default {
           },
           {
             threshold: 0,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: "0px 0px -100px 0px"
           }
         )
 
@@ -115,6 +115,6 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
-@import 'animation';
+@import "style";
+@import "animation";
 </style>

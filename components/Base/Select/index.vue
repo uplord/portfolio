@@ -31,26 +31,26 @@ export default {
   props: {
     label: {
       type: String,
-      default: ''
+      default: ""
     },
     id: {
       type: String,
-      default: ''
+      default: ""
     },
     modelValue: {
       type: [String, Number],
-      default: ''
+      default: ""
     },
     options: {
       type: Array,
       required: true
     }
   },
-  emits: ['update:modelValue']
+  emits: ["update:modelValue"]
 }
 </script>
 
 <style lang="less">
-@import '../style';
-@import 'style';
+@import "../style";
+@import "style";
 </style>

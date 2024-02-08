@@ -21,10 +21,10 @@ export default {
   props: {
     classes: {
       type: String,
-      default: ''
+      default: ""
     }
   },
-  emits: ['update:modelValue'],
+  emits: ["update:modelValue"],
   data() {
     return {
       file: undefined
@@ -37,7 +37,7 @@ export default {
       if (target && target.files.length) {
         this.file = target.files[0]
         this.file.image = window.URL.createObjectURL(target.files[0])
-        this.$emit('update:modelValue', this.file)
+        this.$emit("update:modelValue", this.file)
       }
     }
   }
@@ -45,6 +45,6 @@ export default {
 </script>
 
 <style lang="less">
-@import '../style';
-@import 'style';
+@import "../style";
+@import "style";
 </style>

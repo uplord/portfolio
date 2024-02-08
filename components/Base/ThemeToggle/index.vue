@@ -45,56 +45,56 @@ export default {
   },
   methods: {
     toggleTheme: function () {
-      let theme = localStorage.getItem('color-mode')
-        ? localStorage.getItem('color-mode')
+      let theme = localStorage.getItem("color-mode")
+        ? localStorage.getItem("color-mode")
         : null
       if (theme == null) {
         if (
           window.matchMedia &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches
+          window.matchMedia("(prefers-color-scheme: dark)").matches
         ) {
-          theme = 'dark'
+          theme = "dark"
         } else {
-          theme = 'light'
+          theme = "light"
         }
       }
 
-      if (theme == 'light') {
-        document.documentElement.classList.remove('light')
-        document.documentElement.classList.add('dark')
-        localStorage.setItem('color-mode', 'dark')
+      if (theme == "light") {
+        document.documentElement.classList.remove("light")
+        document.documentElement.classList.add("dark")
+        localStorage.setItem("color-mode", "dark")
 
-        if (document.getElementsByClassName('banner').length) {
+        if (document.getElementsByClassName("banner").length) {
           if (
             document
-              .getElementsByClassName('banner')[0]
-              .classList.contains('is-auto')
+              .getElementsByClassName("banner")[0]
+              .classList.contains("is-auto")
           ) {
             document
-              .getElementsByClassName('header')[0]
-              .classList.remove('dark-header')
+              .getElementsByClassName("header")[0]
+              .classList.remove("dark-header")
             document
-              .getElementsByClassName('header')[0]
-              .classList.remove('light-header')
+              .getElementsByClassName("header")[0]
+              .classList.remove("light-header")
           }
         }
-      } else if (theme == 'dark') {
-        document.documentElement.classList.add('light')
-        document.documentElement.classList.remove('dark')
-        localStorage.setItem('color-mode', 'light')
+      } else if (theme == "dark") {
+        document.documentElement.classList.add("light")
+        document.documentElement.classList.remove("dark")
+        localStorage.setItem("color-mode", "light")
 
-        if (document.getElementsByClassName('banner').length) {
+        if (document.getElementsByClassName("banner").length) {
           if (
             document
-              .getElementsByClassName('banner')[0]
-              .classList.contains('is-auto')
+              .getElementsByClassName("banner")[0]
+              .classList.contains("is-auto")
           ) {
             document
-              .getElementsByClassName('header')[0]
-              .classList.remove('dark-header')
+              .getElementsByClassName("header")[0]
+              .classList.remove("dark-header")
             document
-              .getElementsByClassName('header')[0]
-              .classList.remove('light-header')
+              .getElementsByClassName("header")[0]
+              .classList.remove("light-header")
           }
         }
       }
@@ -104,5 +104,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>

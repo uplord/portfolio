@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  props: ['buttons'],
+  props: ["buttons"],
   data() {
     return {}
   },
@@ -19,5 +19,5 @@ export default {
 </script>
 
 <style lang="less">
-@import 'style';
+@import "style";
 </style>
