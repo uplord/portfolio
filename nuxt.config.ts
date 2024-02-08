@@ -34,7 +34,8 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536,
       "2xl": 1536
-    }
+    },
+    provider: "netlify"
   },
   security: {
     headers: {
