@@ -1,17 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ["~/assets/less/style.less"],
-  ssr: false,
+  ssr: true,
   devtools: { enabled: true },
   app: {
     buildAssetsDir: "/nuxt/",
     head: {
-      meta: [
-        {
-          name: "apple-mobile-web-app-capable",
-          content: "yes"
-        }
-      ],
       script: [
         {
           src: "/assets/js/script.js"
@@ -82,7 +76,7 @@ export default defineNuxtConfig({
       background_color: "#dd2121"
     },
     icon: {
-      sizes: [64, 120, 144, 152, 192, 384, 512] //Array of sizes to be generated (Square).These are the default values
+      sizes: [64, 120, 144, 152, 192, 384, 512]
     }
   }
 })
