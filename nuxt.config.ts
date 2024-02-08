@@ -6,6 +6,12 @@ export default defineNuxtConfig({
   app: {
     buildAssetsDir: "/nuxt/",
     head: {
+      meta: [
+        {
+          name: "apple-mobile-web-app-capable",
+          content: "yes"
+        }
+      ],
       script: [
         {
           src: "/assets/js/script.js"
