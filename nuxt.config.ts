@@ -25,6 +25,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-security"
   ],
+  buildModules: ["@nuxtjs/pwa"],
   googleFonts: {
     families: {
       "DM Sans": [400, 500, 600, 700]
@@ -69,6 +70,19 @@ export default defineNuxtConfig({
         "/_ipx/f_webp&fit_outside&s_272x182/assets/images/carmoney.png",
         "/_ipx/f_webp&fit_outside&s_136x91/assets/images/carmoney.png"
       ]
+    }
+  },
+  pwa: {
+    manifest: {
+      name: "Michael Allen",
+      short_name: "Michael Allen",
+      description: "Michael Allen portfolio",
+      theme_color: "#dd2121",
+      lang: "en",
+      background_color: "#dd2121"
+    },
+    icon: {
+      sizes: [64, 120, 144, 152, 192, 384, 512] //Array of sizes to be generated (Square).These are the default values
     }
   }
 })
