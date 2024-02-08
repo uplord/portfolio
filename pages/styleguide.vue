@@ -722,6 +722,40 @@
           <hr />
         </div>
 
+        <div class="inner-container">
+          <h3 class="heading">Tabs</h3>
+          <Tabs
+            :tabs="[
+              {
+                title: 'Tab Title 1',
+                content:
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar in tortor id lobortis. Mauris imperdiet imperdiet libero, eu faucibus tortor laoreet nec. Phasellus pulvinar auctor sapien, eu iaculis tortor dignissim ut. Mauris erat enim, ultrices auctor mi et, commodo sodales sem. Nullam at ligula sit amet nulla varius vehicula in quis leo. Sed ac mi laoreet, venenatis lectus eget, fringilla tortor. Cras sed vestibulum eros, eu viverra dui. Quisque molestie consequat risus et faucibus. Duis tempor nisi a enim finibus semper.'
+              },
+              {
+                title: 'Tab Title 2',
+                content:
+                  'Aliquam et facilisis tortor. Curabitur rutrum velit vel augue posuere, et finibus ligula malesuada. Suspendisse ligula mauris, vulputate non condimentum mattis, vulputate a ligula. In imperdiet, justo vitae auctor interdum, sem dui porttitor risus, eu porta velit odio eu leo. Morbi condimentum dolor scelerisque suscipit consectetur. Donec vel turpis commodo, congue lectus nec, porta magna. Maecenas vitae tellus vitae leo suscipit viverra a vel sem. Praesent justo dui, vestibulum ut molestie at, vulputate vitae ligula. Phasellus eget velit sagittis, vehicula risus id, luctus libero. Curabitur efficitur enim vel eleifend gravida.'
+              }
+            ]"
+          />
+
+          <Tabs
+            :tabs="[
+              {
+                title: 'Tab Title 1',
+                content:
+                  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar in tortor id lobortis. Mauris imperdiet imperdiet libero, eu faucibus tortor laoreet nec. Phasellus pulvinar auctor sapien, eu iaculis tortor dignissim ut. Mauris erat enim, ultrices auctor mi et, commodo sodales sem. Nullam at ligula sit amet nulla varius vehicula in quis leo. Sed ac mi laoreet, venenatis lectus eget, fringilla tortor. Cras sed vestibulum eros, eu viverra dui. Quisque molestie consequat risus et faucibus. Duis tempor nisi a enim finibus semper.'
+              },
+              {
+                title: 'Tab Title 2',
+                content:
+                  'Aliquam et facilisis tortor. Curabitur rutrum velit vel augue posuere, et finibus ligula malesuada. Suspendisse ligula mauris, vulputate non condimentum mattis, vulputate a ligula. In imperdiet, justo vitae auctor interdum, sem dui porttitor risus, eu porta velit odio eu leo. Morbi condimentum dolor scelerisque suscipit consectetur. Donec vel turpis commodo, congue lectus nec, porta magna. Maecenas vitae tellus vitae leo suscipit viverra a vel sem. Praesent justo dui, vestibulum ut molestie at, vulputate vitae ligula. Phasellus eget velit sagittis, vehicula risus id, luctus libero. Curabitur efficitur enim vel eleifend gravida.'
+              }
+            ]"
+            :vertical="true"
+          />
+        </div>
+
         <!--
         <h3 class="heading">Empty States</h3>
         <h3 class="heading">Code Snippet</h3>

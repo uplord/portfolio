@@ -1,6 +1,6 @@
 <template>
   <div class="button-group">
-    <BaseButtonsButton
+    <BaseButton
       v-for="(button, index) in buttons"
       :key="index"
       :button="button"

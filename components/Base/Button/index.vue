@@ -37,3 +37,7 @@ export default {
   methods: {}
 }
 </script>
+
+<style lang="less">
+@import 'style';
+</style>

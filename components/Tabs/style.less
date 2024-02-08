@@ -1,0 +1,52 @@
+.tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  &.flex-column {
+
+    + .tab-content {
+      padding: 0;
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+
+  button {
+
+    &.active,
+    &:hover {
+      background: var(--primary-color);
+      border-color: transparent;
+      color: var(--primary-color-text);
+
+      &:hover {
+        background: var(--primary-color-hover);
+      }
+
+      &:focus {
+        background: var(--primary-color-hover);
+        box-shadow: 0 0 0 4px rgba(0,0,0,0.1);
+
+        .dark & {
+          box-shadow: 0 0 0 4px rgba(255,255,255,0.1);
+        }
+      }
+    }
+  }
+}
+
+.tab-content {
+  flex: 1;
+  padding: 16px 0 0;
+}
+
+.tab-panel {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
