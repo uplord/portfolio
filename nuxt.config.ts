@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ["~/assets/less/style.less"],
-  ssr: true,
+  ssr: false,
   devtools: { enabled: true },
   app: {
     buildAssetsDir: "/nuxt/",
@@ -67,16 +67,6 @@ export default defineNuxtConfig({
     }
   },
   pwa: {
-    manifest: {
-      name: "Michael Allen",
-      short_name: "Michael Allen",
-      description: "Michael Allen portfolio",
-      theme_color: "#dd2121",
-      lang: "en",
-      background_color: "#dd2121"
-    },
-    icon: {
-      sizes: [64, 120, 144, 152, 192, 384, 512]
-    }
+    manifest: "manifest.json"
   }
 })
