@@ -23,8 +23,8 @@ export default defineNuxtConfig({
       {
         fix: true
       }
-    ],
-    'nuxt-security'
+    ]
+    //'nuxt-security'
   ],
   googleFonts: {
     families: {
