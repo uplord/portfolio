@@ -43,8 +43,5 @@ export default defineNuxtConfig({
         "frame-ancestors": "'none'"
       }
     }
-  },
-  routeRules: {
-    "/": { prerender: true }
   }
 })
