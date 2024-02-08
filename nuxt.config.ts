@@ -42,5 +42,27 @@ export default defineNuxtConfig({
         "frame-ancestors": "'none'"
       }
     }
+  },
+  nitro: {
+    prerender: {
+      routes: [
+        "/_ipx/f_webp&fit_outside&s_1100x1100/assets/images/me.jpeg",
+        "/_ipx/f_webp&fit_outside&s_550x550/assets/images/me.jpeg",
+        "/_ipx/f_webp&fit_outside&s_280x280/assets/images/me.jpeg",
+        "/_ipx/f_webp&fit_outside&s_140x140/assets/images/me.jpeg",
+        "/_ipx/f_webp&fit_outside&s_1320x1628/assets/images/about.png",
+        "/_ipx/f_webp&fit_outside&s_660x814/assets/images/about.png",
+        "/_ipx/f_webp&fit_outside&s_440x542/assets/images/about.png",
+        "/_ipx/f_webp&fit_outside&s_220x271/assets/images/about.png",
+        "/_ipx/f_webp&fit_outside&s_652x434/assets/images/petervardy.png",
+        "/_ipx/f_webp&fit_outside&s_326x217/assets/images/petervardy.png",
+        "/_ipx/f_webp&fit_outside&s_272x182/assets/images/petervardy.png",
+        "/_ipx/f_webp&fit_outside&s_136x91/assets/images/petervardy.png",
+        "/_ipx/f_webp&fit_outside&s_652x434/assets/images/carmoney.png",
+        "/_ipx/f_webp&fit_outside&s_326x217/assets/images/carmoney.png",
+        "/_ipx/f_webp&fit_outside&s_272x182/assets/images/carmoney.png",
+        "/_ipx/f_webp&fit_outside&s_136x91/assets/images/carmoney.png"
+      ]
+    }
   }
 })

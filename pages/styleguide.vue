@@ -540,7 +540,7 @@
             :slides="[
               {
                 image: {
-                  src: '/assets/images/main3.png',
+                  src: '/assets/images/me.jpeg',
                   width: 500,
                   height: 500,
                   title: 'Banner Michael Allen Image',
@@ -557,37 +557,6 @@
                   }
                 ],
                 class: ''
-              },
-              {
-                image: {
-                  src: '/assets/images/122-2000x800.jpg',
-                  src_mobile: 'https://placehold.co/640x1000/333/333'
-                },
-                title: 'A Senior Front End Developer based in Dundee, Scotland',
-                subtitle: 'With 7 years in the industry creating websites',
-                buttons: [
-                  {
-                    text: 'Get in touch',
-                    link: '#contact-form',
-                    class: 'large'
-                  }
-                ],
-                class: 'text-center light'
-              },
-              {
-                image: {
-                  src: '/assets/images/185-2000x800.jpg',
-                  src_mobile: 'https://placehold.co/640x1000/EEE/EEE'
-                },
-                title: 'A Senior Front End Developer based in Dundee, Scotland',
-                subtitle: 'With 7 years in the industry creating websites',
-                buttons: [
-                  {
-                    text: 'Get in touch',
-                    class: 'large'
-                  }
-                ],
-                class: 'text-center dark'
               }
             ]"
           />
