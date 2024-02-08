@@ -46,7 +46,7 @@ export default defineNuxtConfig({
   security: {
     headers: {
       contentSecurityPolicy: {
-        'frame-ancestors': '"none"'
+        'frame-ancestors': '"self"'
       }
     }
   }
