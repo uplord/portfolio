@@ -1,0 +1,80 @@
+.color-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  .color {
+    width: calc(25% - (16px / 4 * 3));
+  }
+}
+
+.color {
+  position: relative;
+  background: var(--block-color);
+  box-shadow: 34px 34px 74px -12px rgba(56, 50, 124, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+
+    .dark & {
+      border-color: rgba(255,255,255,0.2);
+    }
+  }
+}
+
+.color-base {
+  height: 120px;
+}
+
+.color-primary {
+  background: var(--primary-color);
+}
+
+.color-heading {
+  background: var(--header-color);
+}
+
+.color-body {
+  background: var(--text-color);
+}
+
+.color-border {
+  background: var(--border-color);
+}
+
+.color-block {
+  background: var(--block-color);
+}
+
+.color-info {
+  background: var(--info-color);
+}
+
+.color-success {
+  background: var(--success-color);
+}
+
+.color-error {
+  background: var(--error-color);
+}
+
+.color-warning {
+  background: var(--warning-color);
+}
+
+.color-info {
+  background: var(--info-color);
+}
+
+.color-text {
+  padding: 8px 16px;
+}

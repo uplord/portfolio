@@ -3,7 +3,11 @@
     <section>
       <div class="inner-container">
         <h1 class="heading">Styleguide</h1>
-        <!--<h2 class="heading">Colours</h2>-->
+
+        <div class="inner-container">
+          <h2 class="heading">Colours</h2>
+          <Colour />
+        </div>
 
         <h2 class="heading">Typography</h2>
 
