@@ -588,10 +588,10 @@
             {
               image: {
                 src: '/assets/images/about.png',
-                width: 660,
-                height: 814,
+                width: 500,
+                height: 617,
                 title: 'About Michael Allen Image',
-                sizes: 'sm:220px md:660px'
+                sizes: 'sm:220px md:500px'
               },
               subtitle: 'About Michael Allen',
               title: 'Front End Development',
@@ -602,10 +602,10 @@
             {
               image: {
                 src: '/assets/images/about.png',
-                width: 660,
-                height: 814,
+                width: 500,
+                height: 617,
                 title: 'About Michael Allen Image',
-                sizes: 'sm:220px md:660px'
+                sizes: 'sm:220px md:500px'
               },
               subtitle: 'About Michael Allen',
               title: 'Front End Development',
