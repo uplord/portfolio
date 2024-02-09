@@ -49,7 +49,7 @@
               <BaseButtons :buttons="section.buttons" />
             </div>
 
-            <div v-if="section.icons" class="image-wrap">
+            <div v-if="section.icons" class="image-wrap image-other">
               <BlockIcons
                 :visible="section.icons_visible"
                 :icons="section.icons"
@@ -58,7 +58,7 @@
               />
             </div>
 
-            <div v-if="section.contact_form" class="image-wrap">
+            <div v-if="section.contact_form" class="image-wrap image-other">
               <FormContact />
             </div>
           </div>

@@ -16,14 +16,14 @@
         }
       }
 
-      &:not(.full) .image-wrap {
+      &:not(.full) .image-wrap:not(.image-other) {
         @media (min-width: 741px) {
           animation-name: fadeIn;
         }
       }
     }
 
-    &:not(.full) .image-wrap {
+    &:not(.full) .image-wrap:not(.image-other) {
       @media (min-width: 741px) {
 
         .animate & {
@@ -37,7 +37,7 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: scale(0.95);
+    transform: scale(0.9);
   }
 
   100% {
