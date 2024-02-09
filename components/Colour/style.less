@@ -4,7 +4,11 @@
   gap: 16px;
 
   .color {
-    width: calc(25% - (16px / 4 * 3));
+    width: calc(50% - (16px / 2 * 1));
+
+    @media (min-width: 641px) {
+      width: calc(25% - (16px / 4 * 3));
+    }
   }
 }
 
