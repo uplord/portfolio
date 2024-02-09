@@ -360,6 +360,7 @@ export default {
   },
   data() {
     return {
+      loading: false,
       sections: [
         {
           visible: false
@@ -399,9 +400,13 @@ export default {
 
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
-            vm.sections[entry.target.index].visible = true
+            setTimeout(() => {
+              vm.loading = true
+              vm.sections[entry.target.index].visible = true
+            }, index * 1200) // Adjust delay time as needed
+            observer.unobserve(entry.target)
           }
         })
       },
