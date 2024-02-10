@@ -55,34 +55,6 @@
               }
             ]"
           />
-
-          <!--
-
-          <h3 class="heading">Button Groups</h3>
-
-          <BaseButtons
-            :buttons="[
-              {
-                text: 'Link',
-                link: '#',
-                class: 'primary'
-              },
-              {
-                text: 'Link',
-                link: '#',
-                class: 'primary'
-              },
-              {
-                text: 'Link',
-                link: '#',
-                class: 'primary'
-              }
-            ]"
-            ,
-            class="group"
-          />
-
-          -->
         </div>
 
         <div class="inner-container">
@@ -217,22 +189,6 @@
             <div class="tooltip bottom">Tooltip Bottom</div>
           </div>
         </div>
-
-        <!--
-        <div class="inner-container">
-          <h3 class="heading">Progress Indicator</h3>
-          <progress></progress>
-        </div>
-
-        <div class="inner-container">
-          <h3 class="heading">Sliders</h3>
-          <div class="field">
-            <div class="input-wrap">
-              <input type="range" />
-            </div>
-          </div>
-        </div>
-        -->
 
         <div class="inner-container">
           <h3 class="heading">Login</h3>
@@ -525,10 +481,6 @@
           />
         </div>
 
-        <!--
-        <h3 class="heading">Video Player</h3>
-        -->
-
         <div class="inner-container">
           <h3 class="heading alignfull">Header Navigation</h3>
         </div>
@@ -561,6 +513,66 @@
                   }
                 ],
                 class: ''
+              },
+              {
+                image: {
+                  src: '/assets/images/me.jpeg',
+                  width: 500,
+                  height: 500,
+                  title: 'Banner Michael Allen Image',
+                  floating: true,
+                  sizes: 'sm:140px md:550px'
+                },
+                title: 'A Senior Front End Developer based in Dundee, Scotland',
+                subtitle: 'With 8 years in the industry creating websites',
+                buttons: [
+                  {
+                    text: 'Get in touch',
+                    link: '#contact-form',
+                    class: 'large'
+                  }
+                ],
+                class: 'reverse'
+              },
+              {
+                image: {
+                  src: '/assets/images/me.jpeg',
+                  width: 500,
+                  height: 500,
+                  title: 'Banner Michael Allen Image',
+                  floating: true,
+                  sizes: 'sm:140px md:550px'
+                },
+                title: 'A Senior Front End Developer based in Dundee, Scotland',
+                subtitle: 'With 8 years in the industry creating websites',
+                buttons: [
+                  {
+                    text: 'Get in touch',
+                    link: '#contact-form',
+                    class: 'large'
+                  }
+                ],
+                class: ''
+              },
+              {
+                image: {
+                  src: '/assets/images/me.jpeg',
+                  width: 500,
+                  height: 500,
+                  title: 'Banner Michael Allen Image',
+                  floating: true,
+                  sizes: 'sm:140px md:550px'
+                },
+                title: 'A Senior Front End Developer based in Dundee, Scotland',
+                subtitle: 'With 8 years in the industry creating websites',
+                buttons: [
+                  {
+                    text: 'Get in touch',
+                    link: '#contact-form',
+                    class: 'large'
+                  }
+                ],
+                class: 'reverse'
               }
             ]"
           />
@@ -619,54 +631,25 @@
           ]"
         />
 
-        <!--
-        <h3 class="heading">Pricing</h3>
-        <h3 class="heading">Metric</h3>
-        <h3 class="heading">Newsletter</h3>
-        <h3 class="heading">Testimonials</h3>
-        <h3 class="heading">Blog</h3>
-        -->
-
         <div class="inner-container">
           <h3 class="heading">Contact</h3>
           <FormContact />
         </div>
-
-        <!--
-        <h3 class="heading">Team</h3>
-        <h3 class="heading">Career</h3>
-        <h3 class="heading">FAQs</h3>
-        -->
 
         <div class="inner-container">
           <h3 class="heading">Footer</h3>
           <Footer />
         </div>
 
-        <!--
-        <h3 class="heading">Modal</h3>
-        -->
-
         <div class="inner-container">
           <h3 class="heading">Pagination</h3>
           <Pagination />
         </div>
 
-        <!--
-        <h3 class="heading">Horizontal Tabs</h3>
-        <h3 class="heading">Vertical Tabs</h3>
-        <h3 class="heading">Progress Steps</h3>
-        <h3 class="heading">Tables</h3>
-        -->
-
         <div class="inner-container">
           <h3 class="heading">Breadcrumbs</h3>
           <Breadcrumbs />
         </div>
-
-        <!--
-        <h3 class="heading">Notifications</h3>
-        -->
 
         <div class="inner-container">
           <h3 class="heading">Alerts</h3>
@@ -728,11 +711,6 @@
             :vertical="true"
           />
         </div>
-
-        <!--
-        <h3 class="heading">Empty States</h3>
-        <h3 class="heading">Code Snippet</h3>
-        -->
       </div>
     </section>
   </main>
@@ -808,8 +786,7 @@ export default {
         class: "styleguide sticky"
       }
     })
-  },
-  data() {
+
     return {
       form: {
         input1: "",
@@ -832,7 +809,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style>
 .styleguide .heading {
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 16px;

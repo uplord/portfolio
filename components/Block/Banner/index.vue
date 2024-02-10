@@ -29,7 +29,9 @@
           v-if="slide.image && slide.image.floating != true"
           class="image-wrap"
         >
-          <NuxtImg :src="slide.image.src" :alt="slide.image.title" />
+          <div class="image">
+            <NuxtImg :src="slide.image.src" :alt="slide.image.title" />
+          </div>
         </div>
 
         <div v-else class="placeholder"></div>
@@ -39,15 +41,17 @@
           :class="{ 'has-floating': slide.image.floating == true }"
         >
           <div v-if="slide.image.floating == true" class="floating-image">
-            <NuxtImg
-              :src="slide.image.src"
-              :sizes="slide.image.sizes"
-              format="webp"
-              fit="outside"
-              :alt="slide.image.title"
-              :width="slide.image.width"
-              :height="slide.image.height"
-            />
+            <div class="image">
+              <NuxtImg
+                :src="slide.image.src"
+                :sizes="slide.image.sizes"
+                format="webp"
+                fit="outside"
+                :alt="slide.image.title"
+                :width="slide.image.width"
+                :height="slide.image.height"
+              />
+            </div>
           </div>
 
           <div class="text-wrap">

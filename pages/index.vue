@@ -299,6 +299,35 @@ const meta = {
 
 export default {
   setup() {
+    const loading = ref(false)
+    const sections = ref(Array.from({ length: 10 }, () => ({ visible: false })))
+
+    onMounted(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              console.log(111)
+              setTimeout(() => {
+                loading.value = true
+                sections.value[entry.target.index].visible = true
+              }, index * 1200)
+              observer.unobserve(entry.target)
+            }
+          })
+        },
+        {
+          threshold: 0,
+          rootMargin: "0px 0px -100px 0px"
+        }
+      )
+
+      document.querySelectorAll(".js_section").forEach(function (el, index) {
+        el.index = index
+        observer.observe(el)
+      })
+    })
+
     useHead({
       title: meta.title,
       meta: [
@@ -357,69 +386,11 @@ export default {
         class: "homepage sticky"
       }
     })
-  },
-  data() {
+
     return {
-      loading: false,
-      sections: [
-        {
-          visible: false
-        },
-        {
-          visible: false
-        },
-        {
-          visible: false
-        },
-        {
-          visible: false
-        },
-        {
-          visible: false
-        },
-        {
-          visible: false
-        },
-        {
-          visible: false
-        },
-        {
-          visible: false
-        },
-        {
-          visible: false
-        },
-        {
-          visible: false
-        }
-      ]
+      loading,
+      sections
     }
-  },
-  mounted() {
-    const vm = this
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              vm.loading = true
-              vm.sections[entry.target.index].visible = true
-            }, index * 1200) // Adjust delay time as needed
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      {
-        threshold: 0,
-        rootMargin: "0px 0px -100px 0px"
-      }
-    )
-
-    document.querySelectorAll(".js_section").forEach(function (el, index) {
-      el.index = index
-      observer.observe(el)
-    })
   }
 }
 </script>
