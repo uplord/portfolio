@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   css: ["~/assets/less/style.less"],
+  srcDir: "src/",
   ssr: false,
   devtools: { enabled: true },
   app: {
