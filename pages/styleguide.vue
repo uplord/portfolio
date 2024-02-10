@@ -504,7 +504,10 @@
                   sizes: 'sm:140px md:550px'
                 },
                 title: 'A Senior Front End Developer based in Dundee, Scotland',
-                subtitle: 'With 8 years in the industry creating websites',
+                subtitle:
+                  'With ' +
+                  total_years +
+                  ' years in the industry creating websites',
                 buttons: [
                   {
                     text: 'Get in touch',
@@ -524,7 +527,10 @@
                   sizes: 'sm:140px md:550px'
                 },
                 title: 'A Senior Front End Developer based in Dundee, Scotland',
-                subtitle: 'With 8 years in the industry creating websites',
+                subtitle:
+                  'With ' +
+                  total_years +
+                  ' years in the industry creating websites',
                 buttons: [
                   {
                     text: 'Get in touch',
@@ -544,7 +550,10 @@
                   sizes: 'sm:140px md:550px'
                 },
                 title: 'A Senior Front End Developer based in Dundee, Scotland',
-                subtitle: 'With 8 years in the industry creating websites',
+                subtitle:
+                  'With ' +
+                  total_years +
+                  ' years in the industry creating websites',
                 buttons: [
                   {
                     text: 'Get in touch',
@@ -564,7 +573,10 @@
                   sizes: 'sm:140px md:550px'
                 },
                 title: 'A Senior Front End Developer based in Dundee, Scotland',
-                subtitle: 'With 8 years in the industry creating websites',
+                subtitle:
+                  'With ' +
+                  total_years +
+                  ' years in the industry creating websites',
                 buttons: [
                   {
                     text: 'Get in touch',
@@ -586,7 +598,9 @@
               subtitle: 'About Michael Allen',
               title: 'Front End Development',
               content:
-                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
+                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last ' +
+                total_years +
+                ' years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
               buttons: [
                 {
                   text: 'Learn more',
@@ -612,7 +626,9 @@
               subtitle: 'About Michael Allen',
               title: 'Front End Development',
               content:
-                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
+                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last ' +
+                total_years +
+                ' years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>',
               class: 'reverse'
             },
             {
@@ -626,7 +642,9 @@
               subtitle: 'About Michael Allen',
               title: 'Front End Development',
               content:
-                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last 8 years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>'
+                '<p>I\'m an experienced Front End Developer who has excellent collaboration, organization and teamwork skills with a keen attention to detail. Passionate about developing in HTML, CSS and JavaScript and always open to exploring new technologies. Over the last ' +
+                total_years +
+                ' years I have dealt with a variety of small and large clients. This has helped by my strong analytical, debugging and problem-solving skills to create exceptional websites.</p>'
             }
           ]"
         />
@@ -717,10 +735,15 @@
 </template>
 
 <script>
+const total_years = Math.floor(
+  (new Date() - new Date("2015-09-01")) / (1000 * 60 * 60 * 24 * 365.25)
+)
 const meta = {
   title: "Michael Allen - Styleguide",
   description:
-    "Experienced Front End Developer with 8 years of expertise, showcasing excellent collaboration, organization, and teamwork skills. Passionate about HTML, CSS, and JavaScript, I thrive on creating exceptional websites. My strong analytical, debugging, and problem-solving abilities have successfully served both small and large clients. Always open to exploring new technologies for innovative web solutions.",
+    "Experienced Front End Developer with " +
+    total_years +
+    " years of expertise, showcasing excellent collaboration, organization, and teamwork skills. Passionate about HTML, CSS, and JavaScript, I thrive on creating exceptional websites. My strong analytical, debugging, and problem-solving abilities have successfully served both small and large clients. Always open to exploring new technologies for innovative web solutions.",
   type: "website",
   image: "/assets/images/og_image.png",
   url: "https://themichael.co.uk/styleguide2"
@@ -803,7 +826,8 @@ export default {
         checkbox3: false,
         file: undefined,
         file2: undefined
-      }
+      },
+      total_years
     }
   }
 }
