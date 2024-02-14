@@ -648,15 +648,6 @@
 
   &.loaded .view-more {
     opacity: 1;
-
-    &:after {
-      transition-delay: 4s;
-      -webkit-animation-delay: 4s;
-      animation-duration: 3s;
-      animation-fill-mode: forwards;
-      animation-name: scrollDown;
-      animation-iteration-count: infinite;
-    }
   }
 
   .view-more {
@@ -684,17 +675,17 @@
       left: 50%;
       top: 12px;
       transform: translateX(-50%);
-      width: 6px;
-      height: 6px;
+      width: 4px;
+      height: 9px;
       border-radius: 3px;
       background: #FFF;
-      transition: 0.3s ease-out;
+      transition: top 0.3s ease-in-out;
 
       @media (max-width: 400px) {
         top: 8px;
-        width: 4px;
-        height: 4px;
-        border-radius: 2px;
+        width: 3px;
+        height: 6px;
+        border-radius: 1.5px;
       }
     }
   }
@@ -709,23 +700,5 @@
   100% {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes scrollDown {
-  0% {
-    top: 12px;
-  }
-
-  40% {
-    top: 20px;
-  }
-
-  60% {
-    top: 20px;
-  }
-
-  100% {
-    top: 12px;
   }
 }
