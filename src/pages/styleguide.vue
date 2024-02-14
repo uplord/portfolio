@@ -201,10 +201,27 @@
             autocomplete="off"
             class="inner-container"
           >
-            <div class="inner-container text-center">
-              <h1 class="h2">Log in to your account</h1>
+            <div class="inner-container">
+              <h1 class="h3">Log in to your account</h1>
               <p>Welcome back! Please enter your details.</p>
             </div>
+
+            <BaseButtons
+              :buttons="[
+                {
+                  text: 'Log in with Google',
+                  type: 'submit',
+                  class: 'full'
+                },
+                {
+                  text: 'Log in with Apple',
+                  type: 'submit',
+                  class: 'full'
+                }
+              ]"
+            />
+
+            <p class="text-center">OR</p>
 
             <BaseInput
               id="login-email"
@@ -250,10 +267,27 @@
             autocomplete="off"
             class="inner-container"
           >
-            <div class="inner-container text-center">
-              <h1 class="h2">Create an account</h1>
+            <div class="inner-container">
+              <h1 class="h3">Create an account</h1>
               <p>Start your 30-day free trial.</p>
             </div>
+
+            <BaseButtons
+              :buttons="[
+                {
+                  text: 'Log in with Google',
+                  type: 'submit',
+                  class: 'full'
+                },
+                {
+                  text: 'Log in with Apple',
+                  type: 'submit',
+                  class: 'full'
+                }
+              ]"
+            />
+
+            <p class="text-center">OR</p>
 
             <BaseInput
               id="signup-name"
@@ -310,8 +344,8 @@
             autocomplete="off"
             class="inner-container"
           >
-            <div class="inner-container text-center">
-              <h1 class="h2">Check your email</h1>
+            <div class="inner-container">
+              <h1 class="h3">Check your email</h1>
               <p>We sent a verfication link to michael@uplord.co.uk</p>
             </div>
 
@@ -375,8 +409,8 @@
             autocomplete="off"
             class="inner-container"
           >
-            <div class="inner-container text-center">
-              <h1 class="h2">Forgot password?</h1>
+            <div class="inner-container">
+              <h1 class="h3">Forgot password?</h1>
               <p>No worries, we'll send you reset instructions.</p>
             </div>
 
@@ -414,8 +448,8 @@
             autocomplete="off"
             class="inner-container"
           >
-            <div class="inner-container text-center">
-              <h1 class="h2">Set new password?</h1>
+            <div class="inner-container">
+              <h1 class="h3">Set new password?</h1>
               <p>
                 Your new password must be different to previously used
                 passwords.
