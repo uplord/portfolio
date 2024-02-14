@@ -6,7 +6,8 @@
       slides_text,
       {
         'animate js_section': set_animate == true || animate == 'true',
-        visible: set_visible == true
+        visible: set_visible == true,
+        loaded: loaded
       }
     ]"
   >
@@ -88,10 +89,14 @@
         @click="changeSlide('next')"
       ></div>
     </div>
+
+    <span class="view-more"></span>
   </div>
 </template>
 
 <script>
+import { isThisTypeNode } from "typescript"
+
 export default {
   props: ["animate", "visible", "slides", "id"],
   data() {
@@ -104,6 +109,7 @@ export default {
       slides_text: null,
       sliding: true,
       paused: false,
+      loaded: false,
       time: 0
     }
   },
@@ -172,6 +178,8 @@ export default {
         setTimeout(function () {
           vm.sliding = false
 
+          vm.loaded = true
+
           if (vm.slides.length > 1) {
             // Add auto scroll
           }
@@ -183,6 +191,8 @@ export default {
         }
 
         vm.sliding = false
+
+        vm.loaded = true
       }
     },
     changeSlide(direction) {

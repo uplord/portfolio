@@ -645,6 +645,49 @@
       }
     }
   }
+
+  &.loaded .view-more {
+    opacity: 1;
+  }
+
+  .view-more {
+    position: absolute;
+    left: 50%;
+    bottom: 16px;
+    width: 32px;
+    height: 48px;
+    border: 2px solid #FFF;
+    border-radius: 16px;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.3s ease-out;
+
+    @media (max-width: 400px) {
+      bottom: 0;
+      width: 24px;
+      height: 36px;
+      border-radius: 12px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 12px;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      background: #FFF;
+
+      @media (max-width: 400px) {
+        top: 8px;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+      }
+    }
+  }
 }
 
 @keyframes fadeIn {
