@@ -648,6 +648,15 @@
 
   &.loaded .view-more {
     opacity: 1;
+
+    &:after {
+      transition-delay: 4s;
+      -webkit-animation-delay: 4s;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+      animation-name: scrollDown;
+      animation-iteration-count: infinite;
+    }
   }
 
   .view-more {
@@ -679,6 +688,7 @@
       height: 6px;
       border-radius: 3px;
       background: #FFF;
+      transition: 0.3s ease-out;
 
       @media (max-width: 400px) {
         top: 8px;
@@ -698,6 +708,24 @@
 
   100% {
     opacity: 1;
-    ransform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    top: 12px;
+  }
+
+  40% {
+    top: 20px;
+  }
+
+  60% {
+    top: 20px;
+  }
+
+  100% {
+    top: 12px;
   }
 }
