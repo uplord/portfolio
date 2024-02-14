@@ -39,14 +39,6 @@
     }
   }
 
-  &:not(.variable) .icon {
-    border: 1px solid rgba(0,0,0,0.1);
-
-    .dark & {
-      border: 1px solid rgba(255,255,255,0.2);
-    }
-  }
-
   &:not(.stacked):not(.variable) {
 
     .icon {
@@ -77,13 +69,10 @@
   padding: 32px;
   border-radius: 8px;
   width: 100%;
+  background: var(--block-color);
 
   @media (max-width: 640px) {
     padding: 24px;
-  }
-
-  .dark & {
-    background: var(--block-color);
   }
 
   &:hover {

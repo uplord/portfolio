@@ -1,65 +1,73 @@
 <template>
   <div
     :id="id"
-    class="block cards-block js_section"
+    class="block block-cards alignmax js_section"
     :class="[classes, { visible: visible == true }]"
   >
-    <div v-if="title" class="text-wrap">
-      <h2>{{ title }}</h2>
-    </div>
-
-    <div class="cards">
-      <component
-        :is="card.link ? 'a' : 'div'"
-        v-for="(card, key) in allCards"
-        :key="key"
-        ref="card"
-        :href="card.link || ''"
-        :target="card.target"
-        class="card js_article"
-        :class="[
-          card.class,
-          {
-            hover: card.text_hover == true,
-            'text-hide': card.hide_text == true,
-            visible: card.visible == true
-          }
-        ]"
-      >
-        <div class="card-inner">
-          <div v-if="card.image" class="image-wrap">
-            <NuxtImg
-              :src="card.image"
-              sizes="xs:136px sm:326px"
-              format="webp"
-              fit="outside"
-              :alt="card.title"
-              loading="lazy"
-              :width="card.image_width"
-              :height="card.image_height"
-            />
+    <div class="inner-container">
+      <div class="alignwide">
+        <div class="inner-container">
+          <div v-if="title" class="text-wrap">
+            <h2>{{ title }}</h2>
           </div>
 
-          <div v-if="card.svg" class="image-wrap svg-wrap">
-            <nuxt-icon :name="card.svg" filled />
-          </div>
-          <div class="text-wrap inner-container">
-            <h3>{{ card.title }}</h3>
-            <p v-if="card.subtitle">{{ card.subtitle }}</p>
-            <div v-if="card.buttons" class="button-group">
-              <div
-                v-for="(button, button_key) in card.buttons"
-                :key="button_key"
-                class="button"
-                :class="button.class"
-              >
-                {{ button.text }}
+          <div class="cards">
+            <component
+              :is="card.link ? 'a' : 'div'"
+              v-for="(card, key) in allCards"
+              :key="key"
+              ref="card"
+              :href="card.link || ''"
+              :target="card.target"
+              class="card js_article"
+              :class="[
+                card.class,
+                {
+                  hover: card.text_hover == true,
+                  'text-hide': card.hide_text == true,
+                  visible: card.visible == true
+                }
+              ]"
+            >
+              <div class="card-inner">
+                <div v-if="card.image" class="image-wrap">
+                  <NuxtImg
+                    :src="card.image"
+                    sizes="xs:136px sm:326px"
+                    format="webp"
+                    fit="outside"
+                    :alt="card.title"
+                    loading="lazy"
+                    :width="card.image_width"
+                    :height="card.image_height"
+                  />
+                </div>
+
+                <div v-if="card.svg" class="image-wrap svg-wrap">
+                  <nuxt-icon :name="card.svg" filled />
+                </div>
+                <div class="text-wrap inner-container">
+                  <h3>{{ card.title }}</h3>
+                  <p v-if="card.subtitle">{{ card.subtitle }}</p>
+                  <div v-if="card.buttons" class="button-group">
+                    <div
+                      v-for="(button, button_key) in card.buttons"
+                      :key="button_key"
+                      class="button"
+                      :class="button.class"
+                    >
+                      {{ button.text }}
+                    </div>
+                  </div>
+                </div>
+                <div v-if="card.tooltip" class="tooltip">
+                  {{ card.tooltip }}
+                </div>
               </div>
-            </div>
+            </component>
           </div>
-          <div v-if="card.tooltip" class="tooltip">{{ card.tooltip }}</div>
         </div>
-      </component>
+      </div>
     </div>
   </div>
 </template>
