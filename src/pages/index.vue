@@ -37,6 +37,7 @@
               ]
             }
           ]"
+          :scroll="true"
         />
 
         <BlockSection

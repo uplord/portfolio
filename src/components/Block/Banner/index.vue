@@ -90,7 +90,7 @@
       ></div>
     </div>
 
-    <span class="view-more"></span>
+    <span class="view-more" v-if="scroll"></span>
   </div>
 </template>
 
@@ -98,7 +98,7 @@
 import { isThisTypeNode } from "typescript"
 
 export default {
-  props: ["animate", "visible", "slides", "id"],
+  props: ["animate", "visible", "slides", "id", "scroll"],
   data() {
     return {
       set_animate: false,
