@@ -90,7 +90,7 @@
       ></div>
     </div>
 
-    <span class="view-more" v-if="scroll"></span>
+    <span v-if="scroll" class="view-more"></span>
   </div>
 </template>
 
@@ -178,12 +178,14 @@ export default {
         setTimeout(function () {
           vm.sliding = false
 
-          vm.loaded = true
-
           if (vm.slides.length > 1) {
             // Add auto scroll
           }
         }, 600)
+
+        setTimeout(function () {
+          vm.loaded = true
+        }, 1600)
       } else {
         first_slide.show_text = true
         if (vm.all_slides.length > 1) {
