@@ -388,6 +388,10 @@ export default {
           rel: "apple-touch-icon",
           sizes: "180x18",
           href: "/assets/images/appletouch.png"
+        },
+        {
+          rel: "manifest",
+          href: "/manifest.json"
         }
       ],
       htmlAttrs: {

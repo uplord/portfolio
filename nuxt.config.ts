@@ -20,7 +20,6 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-security"
   ],
-  buildModules: ["@nuxtjs/pwa"],
   googleFonts: {
     families: {
       "DM Sans": [400, 500, 600, 700]
@@ -66,8 +65,5 @@ export default defineNuxtConfig({
         "/_ipx/f_webp&fit_outside&s_136x91/assets/images/carmoney.png"
       ]
     }
-  },
-  pwa: {
-    manifest: "manifest.json"
   }
 })
