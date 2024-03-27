@@ -7,5 +7,11 @@
 </template>
 
 <script>
-export default {}
+export default {
+  setup() {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js")
+    }
+  }
+}
 </script>

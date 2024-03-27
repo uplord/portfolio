@@ -318,7 +318,6 @@ export default {
         (entries) => {
           entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-              console.log(111)
               setTimeout(() => {
                 loading.value = true
                 sections.value[entry.target.index].visible = true
