@@ -1,5 +1,10 @@
 <template>
-  <form method="post" action="" autocomplete="off" class="inner-container">
+  <form
+    method="post"
+    action=""
+    autocomplete="off"
+    class="inner-container form border"
+  >
     <div class="inner-container text-center">
       <h1 class="h3">Get in touch</h1>
     </div>

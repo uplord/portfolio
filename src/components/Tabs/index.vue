@@ -1,6 +1,6 @@
 <template>
-  <div class="tabs" :class="{ 'flex align-start gap-4': vertical == true }">
-    <div class="tabs-nav" :class="{ 'flex-column': vertical == true }">
+  <div class="tabs">
+    <div class="tabs-nav">
       <button
         v-for="(tab, key) in tabs"
         :key="key"
@@ -25,7 +25,7 @@
 </template>
 <script>
 export default {
-  props: ["tabs", "vertical"],
+  props: ["tabs"],
   setup() {
     const active = ref(0)
 
