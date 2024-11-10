@@ -40,8 +40,10 @@ defineProps(['data']);
 </script>
 
 <style lang="scss" scoped>
-.has-tooltip:hover .tooltip {
-  opacity: 1;
-  display: block
+@media (min-width: 768px) {
+  .has-tooltip:hover .tooltip {
+    opacity: 1;
+    display: block
+  }
 }
 </style>
