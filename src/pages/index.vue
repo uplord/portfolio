@@ -80,7 +80,7 @@ const sections = [
         class: 'button large',
       },{
         text: 'Download CV',
-        link: '/',
+        link: '/assets/Michael_Allen_CV.pdf',
         class: 'link large',
       }]
     }
