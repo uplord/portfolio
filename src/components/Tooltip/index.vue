@@ -22,6 +22,7 @@ defineProps(['text']);
     max-width: none;
     white-space: nowrap;
     opacity: 0;
+    display: none;
   }
 
   &.icon {

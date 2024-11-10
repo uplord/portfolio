@@ -42,5 +42,6 @@ defineProps(['data']);
 <style lang="scss" scoped>
 .has-tooltip:hover .tooltip {
   opacity: 1;
+  display: block
 }
 </style>
