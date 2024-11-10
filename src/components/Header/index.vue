@@ -1,0 +1,164 @@
+<template>
+  <div id="header" class="relative md:sticky top-0 bg-white dark:bg-[#0d0d0d] -mb-[78px] z-10">
+    <div class="container mx-auto max-w-full lg:max-w-[1432px] px-4 flex items-center gap-4">
+      <nuxt-link to="/" class="mr-auto font-heading text-xl font-bold">
+        <span class="mr-2 inline-flex items-center justify-center font-bold bg-primary text-white text-[26px] w-10 h-10 rounded-[20px]">M</span>The<span class="text-primary">Michael</span>
+      </nuxt-link>
+      <div class="navigation mr-auto hidden md:block">
+        <div class="my-4 flex items-center rounded-[23px] bg-[rgba(0,0,0,.05)] dark:bg-[#202124]">
+          <nuxt-link to="/" class="hidden lg:flex mr-1">Home</nuxt-link>
+          <nuxt-link to="/#about-me" class="flex mr-1 lg:mx-1">About me</nuxt-link>
+          <nuxt-link to="/#projects" class="flex mx-1">Projects</nuxt-link>
+          <nuxt-link to="/#timeline" class="flex mx-1">Timeline</nuxt-link>
+          <nuxt-link to="mailto:michael@uplord.co.uk" class="flex ml-1">Contact</nuxt-link>
+        </div>
+      </div>
+      <div class="right">
+         <div class="toggle relative flex my-5 w-[76px] cursor-pointer" @click="toggleTheme">
+          <span></span>
+          <svg
+            class="sun"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_320_4)">
+              <path
+                d="M10 0C9.48047 0 9.0625 0.417969 9.0625 0.9375V3.4375C9.0625 3.95703 9.48047 4.375 10 4.375C10.5195 4.375 10.9375 3.95703 10.9375 3.4375V0.9375C10.9375 0.417969 10.5195 0 10 0ZM10 15.625C9.48047 15.625 9.0625 16.043 9.0625 16.5625V19.0625C9.0625 19.582 9.48047 20 10 20C10.5195 20 10.9375 19.582 10.9375 19.0625V16.5625C10.9375 16.043 10.5195 15.625 10 15.625ZM19.0625 10.9375C19.582 10.9375 20 10.5195 20 10C20 9.48047 19.582 9.0625 19.0625 9.0625H16.5625C16.043 9.0625 15.625 9.48047 15.625 10C15.625 10.5195 16.043 10.9375 16.5625 10.9375H19.0625ZM4.375 10C4.375 9.48047 3.95703 9.0625 3.4375 9.0625H0.9375C0.417969 9.0625 0 9.48047 0 10C0 10.5195 0.417969 10.9375 0.9375 10.9375H3.4375C3.95703 10.9375 4.375 10.5195 4.375 10ZM17.0703 4.25391C17.4375 3.88672 17.4375 3.29297 17.0703 2.92969C16.7031 2.56641 16.1094 2.5625 15.7461 2.92969L13.9766 4.69922C13.6094 5.06641 13.6094 5.66016 13.9766 6.02344C14.3437 6.38672 14.9375 6.39062 15.3008 6.02344L17.0703 4.25391ZM6.02344 13.9766C5.65625 13.6094 5.0625 13.6094 4.69922 13.9766L2.92969 15.7461C2.5625 16.1133 2.5625 16.707 2.92969 17.0703C3.29688 17.4336 3.89062 17.4375 4.25391 17.0703L6.02344 15.3008C6.39062 14.9336 6.39062 14.3398 6.02344 13.9766ZM15.7461 17.0703C16.1133 17.4375 16.707 17.4375 17.0703 17.0703C17.4336 16.7031 17.4375 16.1094 17.0703 15.7461L15.3008 13.9766C14.9336 13.6094 14.3398 13.6094 13.9766 13.9766C13.6133 14.3437 13.6094 14.9375 13.9766 15.3008L15.7461 17.0703ZM6.02344 6.02344C6.39062 5.65625 6.39062 5.0625 6.02344 4.69922L4.25391 2.92969C3.88672 2.5625 3.29297 2.5625 2.92969 2.92969C2.56641 3.29688 2.5625 3.89062 2.92969 4.25391L4.69922 6.02344C5.06641 6.39062 5.66016 6.39062 6.02344 6.02344ZM10 14.375C12.418 14.375 14.375 12.418 14.375 10C14.375 7.58203 12.418 5.625 10 5.625C7.58203 5.625 5.625 7.58203 5.625 10C5.625 12.418 7.58203 14.375 10 14.375Z"
+                fill="currentColor"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_320_4">
+                <rect width="20" height="20" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+  
+          <svg
+            class="moon"
+            width="18"
+            height="20"
+            viewBox="0 0 18 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10.403 0C4.88958 0 0.425293 4.47768 0.425293 10C0.425293 15.5223 4.88958 20 10.403 20C13.1083 20 15.5592 18.9196 17.3583 17.1696C17.5815 16.9509 17.6396 16.6116 17.4967 16.3348C17.3539 16.058 17.0458 15.9018 16.7378 15.9554C16.3003 16.0312 15.8539 16.0714 15.394 16.0714C11.0681 16.0714 7.55922 12.5536 7.55922 8.21429C7.55922 5.27679 9.16636 2.71875 11.5458 1.37054C11.8182 1.21429 11.9565 0.901786 11.8896 0.598214C11.8226 0.294643 11.5637 0.0669644 11.2512 0.0401786C10.9699 0.0178572 10.6887 0.00446422 10.403 0.00446422V0Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup>
+
+const toggleTheme = () => {
+  let theme = localStorage.getItem("color-mode") || null;
+  if (theme === null) {
+    theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  if (theme === "light") {
+    document.documentElement.classList.remove("light");
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("color-mode", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("light");
+    localStorage.setItem("color-mode", "light");
+  }
+
+  const banner = document.getElementsByClassName("banner")[0];
+  if (banner && banner.classList.contains("is-auto")) {
+    const header = document.getElementsByClassName("header")[0];
+    if (header) {
+      header.classList.remove("dark-header");
+      header.classList.remove("light-header");
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.scrolled #header {
+  @apply border-b border-border dark:border-border-dark
+}
+
+.light .toggle {
+
+  span:after {
+    left: 40px;
+  }
+
+  .moon {
+    opacity: 0;
+  }
+}
+
+.dark .toggle {
+
+  span {
+    border-color: #97948f;
+    
+    &:after {
+      background: #97948f;
+      left: 4px;
+    }
+  }
+
+  svg {
+    left: 10px;
+  }
+
+  .sun {
+    opacity: 0;
+  }
+}
+
+.toggle {
+
+  span {
+    @apply bg-[rgba(0,0,0,.05)] dark:bg-[#202124];
+    border-radius: 20px;
+    display: block;
+    height: 40px;
+    position: relative;
+    transition: all .3s;
+    width: 100%;
+  }
+  span:after {
+    border-radius: 16px;
+    content: "";
+    height: 32px;
+    @apply bg-[#FFD43B] dark:bg-[#74C0FC];
+    position: absolute;
+    top: 4px;
+    transition: all .3s;
+    width: 32px;
+    z-index: 1;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #fff;
+    left: 46px;
+    transition: all .3s;
+    opacity: 1;
+  }
+}
+
+.navigation {
+
+  a {
+    @apply items-center px-4 lg:px-6 py-3 h-[46px] leading-5 rounded-[23px] hover:bg-[rgba(0,0,0,.1)] dark:hover:bg-white dark:hover:text-[#312e2c] transition-all;
+  }
+}
+</style>
